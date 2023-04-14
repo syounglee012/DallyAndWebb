@@ -29,7 +29,7 @@ const Constainer = styled.div`
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
   }
   & h1 {
     color: #533575;
