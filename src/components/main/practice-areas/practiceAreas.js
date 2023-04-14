@@ -4,6 +4,13 @@ import divorce from "../../../../public/images/divorce.png";
 import childCustody from "../../../../public/images/child_custody.png";
 import modification from "../../../../public/images/modification.png";
 
+const Images = styled(Image)`
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  position: relative;
+`;
+
 export default function PracticeAreas() {
   return (
     <MainWrapper>
@@ -20,18 +27,7 @@ export default function PracticeAreas() {
       </div>
       <ImageWapper>
         <div>
-          <Image
-            src={divorce}
-            alt="divorce image"
-            width={358}
-            height={170}
-            style={{
-              width: "100%",
-              maxWidth: "380px",
-              height: "auto",
-              position: "relative",
-            }}
-          />
+          <Images src={divorce} alt="divorce image" />
           <h3>DIVORCE</h3>
           <p>
             In Texas Law, there is no difference when referring to contested and
@@ -44,18 +40,7 @@ export default function PracticeAreas() {
           <button>LEARN MORE</button>
         </div>
         <div>
-          <Image
-            src={childCustody}
-            alt="divorce image"
-            width={358}
-            height={170}
-            style={{
-              width: "100%",
-              maxWidth: "380px",
-              height: "auto",
-              position: "relative",
-            }}
-          />
+          <Images src={childCustody} alt="divorce image" />
           <h3>CHILD CUSTODY</h3>
           <p>
             The often used terms “full custody” or “sole custody” are not actual
@@ -67,18 +52,7 @@ export default function PracticeAreas() {
           <button>LEARN MORE</button>
         </div>
         <div>
-          <Image
-            src={modification}
-            alt="divorce image"
-            width={358}
-            height={170}
-            style={{
-              width: "100%",
-              maxWidth: "380px",
-              height: "auto",
-              position: "relative",
-            }}
-          />
+          <Images src={modification} alt="divorce image" />
           <h3>MODIFICATION</h3>
           <p>
             If you already have a court order in place, you may be able to
