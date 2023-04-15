@@ -128,6 +128,16 @@ const Constainer = styled.div`
     line-height: 1.4rem;
     width: 90%;
   }
+
+  @media (max-width: 768px) {
+    & h1 {
+      font-size: 24px;
+    }
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `;
 
 const ContactForm = styled.form`
@@ -153,9 +163,21 @@ const ContactForm = styled.form`
     display: block;
     letter-spacing: 4px;
     padding: 1rem 3rem;
+    margin-top: 1rem;
     background-color: transparent;
     border: 1px solid #ffffff;
     cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    align-items: center;
+    gap: 0.5rem;
+    & input,
+    select {
+      padding: 0.5rem;
+    }
+    & button {
+      padding: 0.5rem 2rem;
+    }
   }
 `;
 
@@ -172,5 +194,13 @@ const ContactInfo = styled.div`
   }
   & p {
     margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+    & h3 {
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
   }
 `;
