@@ -57,6 +57,14 @@ const Container = styled.div`
     line-height: 1.5rem;
     font-weight: 300;
   }
+
+  @media (max-width: 768px) {
+    .center-wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 2rem 5rem;
+    }
+  }
 `;
 
 const NameBox = styled.div`
@@ -72,5 +80,16 @@ const NameBox = styled.div`
   & h3 {
     color: #808080;
     font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+    flex-direction: row;
+    max-width: 350px;
+    padding-top: 1rem;
+
+    & h3 {
+      font-size: 14px;
+    }
   }
 `;

@@ -52,4 +52,14 @@ const Constainer = styled.div`
     letter-spacing: 1px;
     width: 90%;
   }
+
+  @media (max-width: 768px) {
+    & h1 {
+      font-size: 24px;
+    }
+    & p {
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+  }
 `;

@@ -34,4 +34,10 @@ const Title = styled.h2`
   background-color: rgba(83, 53, 117, 0.8);
   padding: 1rem 2rem;
   letter-spacing: 6px;
+
+  @media (max-width: 768px) {
+    left: 50px;
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
 `;

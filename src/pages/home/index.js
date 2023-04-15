@@ -69,11 +69,22 @@ const ConsultationButtonBox = styled.div`
   }
   @media (max-width: 1200px) {
     justify-content: space-around;
+    flex-direction: column;
+    height: 60px;
+    bottom: 13px;
+    background-color: rgba(83, 53, 117, 1);
+
     & h1 {
-      font-size: 16px;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-right: 0;
     }
     & button {
-      padding: 0.5rem 1rem;
+      font-size: 9px;
+      letter-spacing: 3px;
+      padding: 0.2rem 1rem;
+      margin-bottom: 10px;
     }
   }
 `;

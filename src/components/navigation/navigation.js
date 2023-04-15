@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,6 +6,8 @@ import logo from "../../../public/images/banner_logo.png";
 import phone from "../../../public/images/phone.png";
 
 export default function Navigation() {
+  const [isMobile, setIsMobile] = useState(false);
+
   return (
     <Nav>
       <Link href={"/home"}>
@@ -13,7 +16,7 @@ export default function Navigation() {
           alt="banner logo"
           width={478}
           height={74}
-          size="100vw"
+          className="logo"
           style={{
             width: "100%",
             height: "auto",
@@ -42,6 +45,7 @@ export default function Navigation() {
           width={261}
           height={47}
           size="100vw"
+          className="phoneLogo"
           style={{
             width: "100%",
             height: "auto",
@@ -83,5 +87,23 @@ const Nav = styled.nav`
     border: none;
     cursor: pointer;
     z-index: 9999;
+    margin-top: -8px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2.5rem 1rem 1rem 1rem;
+    & ul {
+      display: none;
+    }
+    .logo {
+      max-width: 200px;
+      margin: -2rem 0 0 -8px;
+    }
+  }
+  & button {
+    margin: -2px 0 0;
+  }
+  .phoneLogo {
+    max-width: 120px;
   }
 `;

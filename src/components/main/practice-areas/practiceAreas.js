@@ -96,13 +96,13 @@ const MainWrapper = styled.div`
     align-items: center;
     margin-bottom: 3rem;
   }
-  & p {
-    font-size: 18px;
-  }
   .top-p {
     display: inline-block;
     width: 70%;
     line-height: 1.8rem;
+  }
+  & p {
+    font-size: 18px;
   }
 
   & button {
@@ -112,6 +112,21 @@ const MainWrapper = styled.div`
     border: 1px solid #67318d;
     padding: 1rem 1.5rem;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    & h1 {
+      font-size: 24px;
+    }
+    .top-div {
+      flex-direction: column;
+      align-items: center;
+    }
+    .top-p {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 `;
 
@@ -140,5 +155,8 @@ const ImageWapper = styled.div`
 
   & button {
     margin: 2rem 0 4rem;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
