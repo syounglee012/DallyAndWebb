@@ -29,10 +29,10 @@ const Title = styled.h2`
   position: absolute;
   color: #ffffff;
   bottom: 5px;
-  left: 100px;
+  left: 370px;
   width: fit-content;
   background-color: rgba(83, 53, 117, 0.8);
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   letter-spacing: 6px;
 
   @media (max-width: 768px) {
