@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 import Banner from "../../components/UI/banner/banner";
 import bannerImage from "../../../public/images/attorney-landing-banner.png";
 import WhyChooseUs from "@/components/main/why-choose-us/whyChooseUs";
@@ -14,9 +15,15 @@ export default function Attorneys() {
       <Container>
         <div className="center-wrapper">
           <NameBox>
-            <h3>LORI E. DALLY</h3>
-            <h3>DANIEL WEBB</h3>
-            <h3>MAX BREWINGTON</h3>
+            <Link href={"/attorneys/dally"}>
+              <h3>LORI E. DALLY</h3>
+            </Link>
+            <Link href={"/attorneys/webb"}>
+              <h3>DANIEL WEBB</h3>
+            </Link>
+            <Link href={"/attorneys/brewington"}>
+              <h3>MAX BREWINGTON</h3>
+            </Link>
           </NameBox>
           <p className="upper-text">
             At Dally & Webb Family Law, PLLC, we are dedicated to providing you
@@ -80,6 +87,9 @@ const NameBox = styled.div`
   & h3 {
     color: #808080;
     font-weight: 500;
+    :hover {
+      color: #67318d;
+    }
   }
 
   @media (max-width: 768px) {

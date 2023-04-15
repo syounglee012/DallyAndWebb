@@ -73,6 +73,9 @@ const Nav = styled.nav`
       margin: 0 3rem;
       font-size: 1.2rem;
       letter-spacing: 1px;
+      :hover {
+        color: #67318d;
+      }
     }
   }
 
@@ -99,11 +102,11 @@ const Nav = styled.nav`
       max-width: 200px;
       margin: -2rem 0 0 -8px;
     }
-  }
-  & button {
-    margin: -2px 0 0;
-  }
-  .phoneLogo {
-    max-width: 120px;
+    & button {
+      margin: -2px 0 0;
+    }
+    .phoneLogo {
+      max-width: 120px;
+    }
   }
 `;
