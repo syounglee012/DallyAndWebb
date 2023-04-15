@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <Nav>
-      <Link href={"/home"}>
+      <Link href={"/"}>
         <Image
           src={logo}
           alt="banner logo"
