@@ -51,7 +51,7 @@ function MyComponent() {
   }, []);
 
   return (
-    <LoadScript googleMapsApiKey={express.env.NEXT_PUBLIC_GOOGLE_API}>
+    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_API}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={zoom}>
         {offices &&
           offices.map((office, idx) => (

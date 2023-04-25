@@ -7,7 +7,7 @@ import ContactInfos from "@/components/contact-us/contactInfo";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export default function App({ Component, pageProps }) {
-  const siteKey = express.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY;
+  const siteKey = process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY;
   return (
     <GoogleReCaptchaProvider
       reCaptchaKey={siteKey}

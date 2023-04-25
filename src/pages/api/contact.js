@@ -13,7 +13,7 @@ export default async function contact(req, res) {
 
     const token = req.headers.token;
     await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${express.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
+      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
       {
         method: "POST",
       }
@@ -24,8 +24,8 @@ export default async function contact(req, res) {
     });
 
     let nodemailer = require("nodemailer");
-    const email = express.env.EMAIL;
-    const pass = express.env.PASSWORD;
+    const email = process.env.EMAIL;
+    const pass = process.env.PASSWORD;
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
