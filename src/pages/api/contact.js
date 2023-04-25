@@ -1,3 +1,9 @@
+import getConfig from "next/config";
+
+const {
+  serverRuntimeConfig: { NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY }, // Only available server side
+} = getConfig();
+
 export default async function contact(req, res) {
   if (req.method === "POST") {
     const data = req.body;
@@ -13,7 +19,7 @@ export default async function contact(req, res) {
 
     const token = req.headers.token;
     await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
+      `https://www.google.com/recaptcha/api/siteverify?secret=${NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
       {
         method: "POST",
       }
