@@ -1,7 +1,11 @@
 import getConfig from "next/config";
 
 const {
-  serverRuntimeConfig: { NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY }, // Only available server side
+  serverRuntimeConfig: {
+    NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY,
+    EMAIL,
+    PASSWORD,
+  }, // Only available server side
 } = getConfig();
 
 export default async function contact(req, res) {
@@ -30,8 +34,8 @@ export default async function contact(req, res) {
     });
 
     let nodemailer = require("nodemailer");
-    const email = process.env.EMAIL;
-    const pass = process.env.PASSWORD;
+    const email = EMAIL;
+    const pass = PASSWORD;
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
