@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import getConfig from "next/config";
 
 function MyComponent() {
   const [zoom, setZoom] = useState(11);
@@ -29,9 +28,6 @@ function MyComponent() {
     },
   ];
 
-  const {
-    publicRuntimeConfig: { NEXT_PUBLIC_GOOGLE_API }, // Available both client and server side
-  } = getConfig();
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     const handleResize = () => {
@@ -55,7 +51,7 @@ function MyComponent() {
   }, []);
 
   return (
-    <LoadScript googleMapsApiKey={NEXT_PUBLIC_GOOGLE_API}>
+    <LoadScript googleMapsApiKey={express.env.NEXT_PUBLIC_GOOGLE_API}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={zoom}>
         {offices &&
           offices.map((office, idx) => (

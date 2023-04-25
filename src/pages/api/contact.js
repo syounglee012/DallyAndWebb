@@ -1,13 +1,3 @@
-import getConfig from "next/config";
-
-const {
-  serverRuntimeConfig: {
-    NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY,
-    EMAIL,
-    PASSWORD,
-  }, // Only available server side
-} = getConfig();
-
 export default async function contact(req, res) {
   if (req.method === "POST") {
     const data = req.body;
@@ -23,7 +13,7 @@ export default async function contact(req, res) {
 
     const token = req.headers.token;
     await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
+      `https://www.google.com/recaptcha/api/siteverify?secret=${express.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
       {
         method: "POST",
       }
@@ -34,8 +24,8 @@ export default async function contact(req, res) {
     });
 
     let nodemailer = require("nodemailer");
-    const email = EMAIL;
-    const pass = PASSWORD;
+    const email = express.env.EMAIL;
+    const pass = express.env.PASSWORD;
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {

@@ -5,14 +5,9 @@ import styled from "styled-components";
 import "../styles/globals.css";
 import ContactInfos from "@/components/contact-us/contactInfo";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
-import getConfig from "next/config";
 
 export default function App({ Component, pageProps }) {
-  const {
-    publicRuntimeConfig: { NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY }, // Available both client and server side
-  } = getConfig();
-
-  const siteKey = NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY;
+  const siteKey = express.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY;
   return (
     <GoogleReCaptchaProvider
       reCaptchaKey={siteKey}
