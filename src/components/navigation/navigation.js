@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import logo from "../../../public/images/banner_logo.png";
+import logo from "../../../public/images/logo-nav.svg";
 import phone from "../../../public/images/phone_icon.png";
 import Hamburger from "../UI/hamburger-menu/hamburger";
 

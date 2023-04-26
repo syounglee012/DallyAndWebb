@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
-import footerLogo from "../../../public/images/DallyWebb_logo_footer.png";
+import footerLogo from "../../../public/images/logo-footer.svg";
 
 export default function Footer() {
   return (
