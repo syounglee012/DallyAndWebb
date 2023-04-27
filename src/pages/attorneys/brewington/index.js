@@ -81,17 +81,6 @@ export default function Brewington() {
             Bar Association
           </p>
         </Content>
-        <Image
-          src={banner}
-          alt="Webb profile picture"
-          className="item"
-          style={{
-            height: "auto",
-            maxHeight: "472px",
-            width: "100%",
-            maxWidth: "418px",
-          }}
-        />
       </div>
     </Container>
   );
@@ -109,11 +98,7 @@ const Container = styled.div`
 
   @media (max-width: 1300px) {
     .center-wrapper {
-      padding: 2rem;
-    }
-    .item:nth-child(2) {
-      order: -1;
-      margin: 1rem 0 2rem;
+      padding: 0 2rem;
     }
   }
 `;
@@ -121,7 +106,6 @@ const Container = styled.div`
 const Content = styled.div`
   display: inline-block;
   width: 100%;
-  max-width: 752px;
   & b {
     font-weight: 700;
     display: block;
