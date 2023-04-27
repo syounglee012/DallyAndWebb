@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -9,7 +9,6 @@ import Hamburger from "../UI/hamburger-menu/hamburger";
 
 export default function Navigation() {
   const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
 
   return (
     <Nav>
@@ -38,20 +37,22 @@ export default function Navigation() {
         </Link>
       </ul>
       <button className="phoneLogo">
-        <Image
-          src={phone}
-          alt="phone icon"
-          width={15}
-          height={15}
-          style={{
-            width: "auto",
-            height: "auto",
-            position: "relative",
-            top: "3px",
-            marginRight: "1rem",
-          }}
-        />
-        817-409-1136
+        <Link href={"tel:+1-817-409-1136"}>
+          <Image
+            src={phone}
+            alt="phone icon"
+            width={15}
+            height={15}
+            style={{
+              width: "auto",
+              height: "auto",
+              position: "relative",
+              top: "3px",
+              marginRight: "1rem",
+            }}
+          />
+          817-409-1136
+        </Link>
       </button>
       <span className="ham-wrapper">
         <Hamburger />
