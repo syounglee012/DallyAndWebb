@@ -43,8 +43,7 @@ export default function Form() {
       return pattern.test(email);
     };
     const isPhone = (phone) => {
-      let pattern =
-        /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+      let pattern = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
       return pattern.test(phone);
     };
     const data = {
