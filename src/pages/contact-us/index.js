@@ -19,7 +19,7 @@ export default function ContactUs() {
           <InfoBox>
             <div>
               <p className="contact-info">
-                To schedule a consultation, call 817-887-9206 or contact us
+                To schedule a consultation, call 817-409-1136 or contact us
                 online through the form below.
               </p>
             </div>

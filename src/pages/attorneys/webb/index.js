@@ -106,7 +106,7 @@ export default function Webb() {
             <br />
             Meals on Wheels of Tarrant County - Endowment Board
             <br />
-            Leadership Granbury - Board Memhber and Alumni
+            Leadership Granbury - Board Member and Alumni
           </p>
           <span />
           <b>Publications and Seminars</b>
