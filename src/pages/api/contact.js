@@ -27,8 +27,15 @@ export default async function contact(req, res) {
     const email = process.env.EMAIL;
     const pass = process.env.PASSWORD;
     let transporter = nodemailer.createTransport({
-      port: 587,
-      host: "smtp.texfamilylawyer.com",
+      host: "smtpout.secureserver.net",
+      secure: true,
+      secureConnection: false, // TLS requires secureConnection to be false
+      tls: {
+        ciphers: "SSLv3",
+      },
+      requireTLS: true,
+      port: 465,
+      debug: true,
       auth: {
         user: email,
         pass,
