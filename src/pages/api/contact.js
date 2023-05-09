@@ -44,7 +44,7 @@ export default async function contact(req, res) {
 
     try {
       await transporter.sendMail({
-        from: `${data.name},  ${email}}`,
+        from: `${data.name},  ${data.email}}`,
         to: email,
         subject: `Message From ${data.name}`,
         text: `Sent from: ${data.name},${data.email}`,
