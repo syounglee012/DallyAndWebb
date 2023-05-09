@@ -44,10 +44,10 @@ export default async function contact(req, res) {
 
     try {
       await transporter.sendMail({
-        from: "lori@texfamilylawyer.com",
+        from: `${data.name} <${email}>}`,
         to: email,
         subject: `Message From ${data.name}`,
-        text: "this is test",
+        text: `Sent from: ${data.name},${data.email}`,
         html: `<p>Sent from: ${data.name},${data.email}</p>
         <p>Phone: ${data.phone}</p>
         <p>Email: ${data.email}</p>
