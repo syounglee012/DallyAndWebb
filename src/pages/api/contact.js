@@ -27,7 +27,8 @@ export default async function contact(req, res) {
     const email = process.env.EMAIL;
     const pass = process.env.PASSWORD;
     let transporter = nodemailer.createTransport({
-      service: "gmail",
+      port: 587,
+      host: "smtp.office365.us",
       auth: {
         user: email,
         pass,
