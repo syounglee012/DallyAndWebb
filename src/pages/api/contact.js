@@ -41,6 +41,8 @@ export default async function contact(req, res) {
       auth: {
         user: email,
         pass,
+        user1: email1,
+        pass1,
       },
     });
 
