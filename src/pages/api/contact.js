@@ -28,16 +28,11 @@ export default async function contact(req, res) {
     const email1 = process.env.EMAIL1;
     const pass = process.env.PASSWORD;
     const pass1 = process.env.PASSWORD1;
+
     let transporter = nodemailer.createTransport({
       host: "smtpout.secureserver.net",
-      secure: true,
-      secureConnection: false, // TLS requires secureConnection to be false
-      tls: {
-        ciphers: "SSLv3",
-      },
-      requireTLS: true,
       port: 465,
-      debug: true,
+      secure: true,
       auth: {
         user: email1,
         pass: pass1,
@@ -46,8 +41,8 @@ export default async function contact(req, res) {
 
     try {
       await transporter.sendMail({
-        from: email1,
-        to: email,
+        from: `${data.email}`,
+        to: [email1, email],
         subject: `Message From ${data.name}`,
         text: `Sent from: ${data.name},${data.email}`,
         html: `<p>Sent from: ${data.name},${data.email}</p>
@@ -59,8 +54,8 @@ export default async function contact(req, res) {
         `,
       });
       return res.status(200).json({ status: "success" });
-    } catch {
-      return res.status(500).json({ status: "error in nodemailer" });
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
     }
   }
   return res.status(400).json({ error: "Something went wrong" });
