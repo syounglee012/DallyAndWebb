@@ -25,6 +25,7 @@ export default async function contact(req, res) {
 
     let nodemailer = require("nodemailer");
     const email = process.env.EMAIL;
+    const email1 = process.env.EMAIL1;
     const pass = process.env.PASSWORD;
     let transporter = nodemailer.createTransport({
       host: "smtpout.secureserver.net",
@@ -46,6 +47,7 @@ export default async function contact(req, res) {
       await transporter.sendMail({
         from: `${data.name} <${email}>}`,
         to: email,
+        email1,
         subject: `Message From ${data.name}`,
         text: `Sent from: ${data.name},${data.email}`,
         html: `<p>Sent from: ${data.name},${data.email}</p>
