@@ -27,6 +27,7 @@ export default async function contact(req, res) {
     const email = process.env.EMAIL;
     const email1 = process.env.EMAIL1;
     const pass = process.env.PASSWORD;
+    const pass1 = process.env.PASSWORD1;
     let transporter = nodemailer.createTransport({
       host: "smtpout.secureserver.net",
       secure: true,
@@ -40,6 +41,8 @@ export default async function contact(req, res) {
       auth: {
         user: email,
         pass,
+        user: email1,
+        pass: pass1,
       },
     });
 
