@@ -39,15 +39,15 @@ export default async function contact(req, res) {
       port: 465,
       debug: true,
       auth: {
-        user: email,
-        pass,
+        user: email1,
+        pass: pass1,
       },
     });
 
     try {
       await transporter.sendMail({
-        from: email,
-        to: email,
+        from: email1,
+        to: email1,
         subject: `Message From ${data.name}`,
         text: `Sent from: ${data.name},${data.email}`,
         html: `<p>Sent from: ${data.name},${data.email}</p>
