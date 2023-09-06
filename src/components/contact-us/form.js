@@ -13,6 +13,7 @@ export default function Form() {
     "Modification",
     "Other",
   ];
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
