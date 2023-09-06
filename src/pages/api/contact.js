@@ -12,6 +12,7 @@ export default async function contact(req, res) {
     }
 
     const token = req.headers.token;
+
     await fetch(
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
       {
