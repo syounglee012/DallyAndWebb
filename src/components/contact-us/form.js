@@ -25,8 +25,8 @@ export default function Form() {
   const handleSubmitForm = (e) => {
     e.preventDefault();
     return toast.error(
-      `I apologize for the inconvenience.\n We are currently experiencing a technical problem.\n
-  Please submit your information directly to lori@texfamilylawyer.com.\n
+      `I apologize for the inconvenience. We are currently experiencing a technical problem.
+  Please submit your information directly to lori@texfamilylawyer.com.
   Thank you for your understanding.`,
       {
         position: "top-center",
