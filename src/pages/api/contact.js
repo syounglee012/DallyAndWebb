@@ -51,7 +51,6 @@ async function sendEmail(data) {
       pass: pass1,
     },
   });
-  console.log(email1, email, email1, pass1);
   await transporter.sendMail({
     from: email1,
     to: [email1, email],
