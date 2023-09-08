@@ -1,64 +1,68 @@
+import nodemailer from "nodemailer";
+
 export default async function contact(req, res) {
-  if (req.method === "POST") {
-    const data = req.body;
-    if (
-      !data.name ||
-      !data.email ||
-      !data.phone ||
-      !data.office ||
-      !data.area
-    ) {
-      return res.status(400).json({ error: "Please fill out all fields" });
-    }
-
-    const token = req.headers.token;
-
-    await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
-      {
-        method: "POST",
-      }
-    ).then((response) => {
-      if (response.success !== 200) {
-        return res.status(400);
-      }
-    });
-
-    let nodemailer = require("nodemailer");
-    const email = process.env.EMAIL;
-    const email1 = process.env.EMAIL1;
-    const pass = process.env.PASSWORD;
-    const pass1 = process.env.PASSWORD1;
-
-    let transporter = nodemailer.createTransport({
-      host: "smtpout.secureserver.net",
-      port: 465,
-      secure: true,
-      auth: {
-        user: email1,
-        pass: pass1,
-      },
-    });
-
-    try {
-      await transporter.sendMail({
-        // from: `${data.email}`,
-        from: email1,
-        to: [email1, email],
-        subject: `Message From ${data.name}`,
-        text: `Sent from: ${data.name},${data.email}`,
-        html: `<p>Sent from: ${data.name},${data.email}</p>
-        <p>Phone: ${data.phone}</p>
-        <p>Email: ${data.email}</p>
-        <p>Name: ${data.name}</p>
-        <p>Office Preference: ${data.office}</p>
-        <p>Area of Interest: ${data.area}</p>
-        `,
-      });
-      return res.status(200).json({ status: "success" });
-    } catch (error) {
-      return res.status(500).json({ error: error.message });
-    }
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
-  return res.status(400).json({ error: "Something went wrong" });
+
+  const data = req.body;
+
+  if (!data.name || !data.email || !data.phone || !data.office || !data.area) {
+    return res.status(400).json({ error: "Please fill out all fields" });
+  }
+
+  const verificationResult = await verifyRecaptcha(req.headers.token);
+  if (!verificationResult) {
+    return res.status(400).json({ error: "reCAPTCHA verification failed" });
+  }
+
+  try {
+    await sendEmail(data);
+    return res.status(200).json({ status: "success" });
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+}
+
+async function verifyRecaptcha(token) {
+  const response = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`,
+    {
+      method: "POST",
+    }
+  );
+
+  const recaptchaResponse = await response.json();
+  return recaptchaResponse.success;
+}
+
+async function sendEmail(data) {
+  const email = process.env.EMAIL;
+  const email1 = process.env.EMAIL1;
+  const pass = process.env.PASSWORD;
+  const pass1 = process.env.PASSWORD1;
+
+  const transporter = nodemailer.createTransport({
+    host: "smtpout.secureserver.net",
+    port: 465,
+    secure: true,
+    auth: {
+      user: email1,
+      pass: pass1,
+    },
+  });
+  console.log(email1, email, email1, pass1);
+  await transporter.sendMail({
+    from: email1,
+    to: [email1, email],
+    subject: `Message From ${data.name}`,
+    text: `Sent from: ${data.name},${data.email}`,
+    html: `<p>Sent from: ${data.name},${data.email}</p>
+            <p>Phone: ${data.phone}</p>
+            <p>Email: ${data.email}</p>
+            <p>Name: ${data.name}</p>
+            <p>Office Preference: ${data.office}</p>
+            <p>Area of Interest: ${data.area}</p>
+            `,
+  });
 }
