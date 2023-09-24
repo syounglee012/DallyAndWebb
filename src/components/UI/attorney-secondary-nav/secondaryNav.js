@@ -14,6 +14,9 @@ export default function SecondaryNav() {
       <Link href={"/attorneys/brewington"}>
         <p className="attorney-name">MAX BREWINGTON</p>
       </Link>
+      <Link href={"/attorneys/sara"}>
+        <p className="attorney-name">SARA VARGAS</p>
+      </Link>
     </NameBox>
   );
 }

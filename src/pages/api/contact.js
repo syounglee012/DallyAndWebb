@@ -45,15 +45,16 @@ async function sendEmail(data) {
   const transporter = nodemailer.createTransport({
     host: "smtpout.secureserver.net",
     port: 465,
-    secure: true,
+    secure: true, // use TLS
     auth: {
-      user: email1,
-      pass: pass1,
+      user: "administrator@texfamilylawyer.com",
+      pass: "LarryLawyer340",
     },
   });
+
   await transporter.sendMail({
-    from: email1,
-    to: [email1, email],
+    from: "administrator@texfamilylawyer.com",
+    to: "administrator@texfamilylawyer.com",
     subject: `Message From ${data.name}`,
     text: `Sent from: ${data.name},${data.email}`,
     html: `<p>Sent from: ${data.name},${data.email}</p>
