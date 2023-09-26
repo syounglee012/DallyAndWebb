@@ -24,9 +24,9 @@ export default function Attorneys() {
             <Link href={"/attorneys/brewington"}>
               <p className="attorney-name">MAX BREWINGTON</p>
             </Link>
-            <Link href={"/attorneys/sara"}>
+            {/* <Link href={"/attorneys/sara"}>
               <p className="attorney-name">SARA VARGAS</p>
-            </Link>
+            </Link> */}
           </NameBox>
           <p className="body-copy">
             At Dally & Webb Family Law, PLLC, we are dedicated to providing you
