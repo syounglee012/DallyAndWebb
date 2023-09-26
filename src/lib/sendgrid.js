@@ -11,3 +11,5 @@ export const sendEmail = async (msg) => {
     console.error(error, error.response.body);
   }
 };
+
+export default sendEmail;
