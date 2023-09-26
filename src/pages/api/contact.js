@@ -1,10 +1,6 @@
-import nodemailer from "nodemailer";
+import { sendEmail } from "../../lib/sendgrid";
 
 export default async function contact(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
   const data = req.body;
 
   if (!data.name || !data.email || !data.phone || !data.office || !data.area) {
@@ -16,11 +12,28 @@ export default async function contact(req, res) {
     return res.status(400).json({ error: "reCAPTCHA verification failed" });
   }
 
+  const admin = process.env.ADMIN_EMAIL;
+
+  const msg = {
+    to: admin, // Change to your recipient
+    from: admin, // Change to your verified sender
+    subject: `Message From ${data.name}`,
+    text: `Sent from: ${data.name}`,
+    html: `<p>Sent from: ${data.name},${data.email}</p>
+              <p>Phone: ${data.phone}</p>
+              <p>Email: ${data.email}</p>
+              <p>Name: ${data.name}</p>
+              <p>Office Preference: ${data.office}</p>
+              <p>Area of Interest: ${data.area}</p>
+              `,
+  };
+
   try {
-    await sendEmail(data);
-    return res.status(200).json({ status: "success" });
+    await sendEmail(msg);
+    res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    console.error(error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 }
 
@@ -34,34 +47,4 @@ async function verifyRecaptcha(token) {
 
   const recaptchaResponse = await response.json();
   return recaptchaResponse.success;
-}
-
-async function sendEmail(data) {
-  const email = process.env.EMAIL;
-  const email1 = process.env.EMAIL1;
-  const pass = process.env.PASSWORD;
-  const pass1 = process.env.PASSWORD1;
-
-  const transporter = nodemailer.createTransport({
-    host: "smtpout.secureserver.net",
-    port: 465,
-    secure: true,
-    auth: {
-      user: email1,
-      pass: pass1,
-    },
-  });
-  await transporter.sendMail({
-    from: email1,
-    to: [email1, email],
-    subject: `Message From ${data.name}`,
-    text: `Sent from: ${data.name},${data.email}`,
-    html: `<p>Sent from: ${data.name},${data.email}</p>
-            <p>Phone: ${data.phone}</p>
-            <p>Email: ${data.email}</p>
-            <p>Name: ${data.name}</p>
-            <p>Office Preference: ${data.office}</p>
-            <p>Area of Interest: ${data.area}</p>
-            `,
-  });
 }
