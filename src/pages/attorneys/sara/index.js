@@ -36,7 +36,7 @@ export default function Sara() {
             beaches, spending time with my family and two dogs.
             <br />
             <br />
-            While at Texas A&M, she was a member of Phi Delta Phi, a two-time
+            While at Texas A&M, I was a member of Phi Delta Phi, a two-time
             fellow for the Aggie Public Interest Law Fellowship, served on the
             Honor Council, and was a mock trial competitor.
           </p>
@@ -65,7 +65,7 @@ export default function Sara() {
             <br />
             L. Clifford Davis Legal Association, 2016-present
             <br />
-            State Bar of Texas Family Law Section, 2020-preent
+            State Bar of Texas Family Law Section, 2020-present
             <br />
             State Bar of Texas African American Lawyers Section, 2020-present
             <br />

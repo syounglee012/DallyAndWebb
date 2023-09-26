@@ -63,9 +63,9 @@ export default function Footer() {
               <Link href="/attorneys/brewington">
                 <li>Max Brewington</li>
               </Link>
-              {/* <Link href="/attorneys/sara">
+              <Link href="/attorneys/sara">
                 <li>Sara Vargas</li>
-              </Link> */}
+              </Link>
             </ul>
           </div>
         </Wapper>
