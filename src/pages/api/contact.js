@@ -12,7 +12,7 @@ export default async function contact(req, res) {
     return res.status(400).json({ error: "reCAPTCHA verification failed" });
   }
   const lori = process.env.EMAIL;
-  const danny = process.env.EMAIL;
+  const danny = process.env.EMAIL1;
   const admin = process.env.ADMIN_EMAIL;
 
   const msg = {
