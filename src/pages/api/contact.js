@@ -11,11 +11,12 @@ export default async function contact(req, res) {
   if (!verificationResult) {
     return res.status(400).json({ error: "reCAPTCHA verification failed" });
   }
-
+  const lori = process.env.EMAIL;
+  const danny = process.env.EMAIL;
   const admin = process.env.ADMIN_EMAIL;
 
   const msg = {
-    to: admin, // Change to your recipient
+    to: [lori, danny], // Change to your recipient
     from: admin, // Change to your verified sender
     subject: `Message From ${data.name}`,
     text: `Sent from: ${data.name}`,
