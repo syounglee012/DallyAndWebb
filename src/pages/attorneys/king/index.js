@@ -3,14 +3,14 @@ import styled from "styled-components";
 import SecondaryNav from "@/components/UI/attorney-secondary-nav/secondaryNav";
 import AttorneyBanner from "@/components/UI/attorney-banner/attorneyBanner";
 import banner from "../../../../public/images/Dally_Banner.png";
-import profile from "../../../../public/images/Dally_profile.png";
+// import profile from "../../../../public/images/Dally_profile.png";
 
 export default function King() {
   return (
     <Container>
       <AttorneyBanner
-        src={banner}
-        alt="mally banner image"
+        // src={banner}
+        alt="J. Steven King banner image"
         name={"J. STEVEN KING"}
         email={"STEVEN@TEXFAMILYLAWYER.COM"}
         priority={true}
@@ -286,8 +286,8 @@ export default function King() {
           </p>
         </Content>
         <Image
-          src={profile}
-          alt="Dally profile picture"
+          // src={profile}
+          alt="J. Steven King profile picture"
           className="item"
           quality={100}
           style={{
