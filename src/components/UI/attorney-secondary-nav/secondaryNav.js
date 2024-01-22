@@ -11,6 +11,9 @@ export default function SecondaryNav() {
       <Link href={"/attorneys/webb"}>
         <p className="attorney-name">DANIEL WEBB</p>
       </Link>
+      <Link href={"/attorneys/steven"}>
+        <p className="attorney-name">J. STEVEN KING</p>
+      </Link>
       <Link href={"/attorneys/brewington"}>
         <p className="attorney-name">MAX BREWINGTON</p>
       </Link>
@@ -28,9 +31,9 @@ const NameBox = styled.div`
   justify-content: space-evenly;
   align-items: flex-start;
   border-top: 1px solid #67318d;
-
   letter-spacing: 2px;
   margin: 4rem auto 0;
+
   .attorney-name {
     color: #808080;
     font-size: 20px;
