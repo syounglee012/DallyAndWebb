@@ -3,8 +3,11 @@ import Link from "next/link";
 import Banner from "@/components/UI/banner/banner";
 import bannerImage from "../../../public/images/attorney-landing-banner.png";
 import WhyChooseUs from "@/components/main/why-choose-us/whyChooseUs";
+import attorneyArray from "../../../public/attorneys.json";
 
 export default function Attorneys() {
+  const attorneys = attorneyArray.sort();
+
   return (
     <>
       <Banner
@@ -15,18 +18,16 @@ export default function Attorneys() {
       <Container>
         <div className="center-wrapper">
           <NameBox>
-            <Link href={"/attorneys/dally"}>
-              <p className="attorney-name">LORI E. DALLY</p>
-            </Link>
-            <Link href={"/attorneys/webb"}>
-              <p className="attorney-name">DANIEL WEBB</p>
-            </Link>
-            <Link href={"/attorneys/brewington"}>
-              <p className="attorney-name">MAX BREWINGTON</p>
-            </Link>
-            <Link href={"/attorneys/sara"}>
-              <p className="attorney-name">SARA VARGAS</p>
-            </Link>
+            {attorneys.map((attorney, idx) => {
+              return (
+                <Link
+                  href={`/attorneys/${attorney.split(" ").pop()}`}
+                  key={attorney + idx}
+                >
+                  <p className="attorney-name">{attorney.toUpperCase()}</p>
+                </Link>
+              );
+            })}
           </NameBox>
           <p className="body-copy">
             At Dally & Webb Family Law, PLLC, we are dedicated to providing you

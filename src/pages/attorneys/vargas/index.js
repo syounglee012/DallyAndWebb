@@ -4,7 +4,7 @@ import AttorneyBanner from "@/components/UI/attorney-banner/attorneyBanner";
 import banner from "../../../../public/images/sara-banner.png";
 import SecondaryNav from "@/components/UI/attorney-secondary-nav/secondaryNav";
 import profile from "../../../../public/images/sara.jpg";
-export default function Sara() {
+export default function Vargas() {
   return (
     <Container>
       <AttorneyBanner

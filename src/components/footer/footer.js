@@ -2,8 +2,10 @@ import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
 import footerLogo from "../../../public/images/logo-footer.svg";
+import attorneyArray from "../../../public/attorneys.json";
 
 export default function Footer() {
+  const attorneys = attorneyArray.sort();
   return (
     <FooterContainer>
       <div className="container">
@@ -52,20 +54,16 @@ export default function Footer() {
             </Link>
             <span />
             <ul>
-              <Link href="/attorneys/dally">
-                <li>Lori E. Dally</li>
-              </Link>
-
-              <Link href="/attorneys/webb">
-                <li>Daniel P. Webb</li>
-              </Link>
-
-              <Link href="/attorneys/brewington">
-                <li>Max Brewington</li>
-              </Link>
-              <Link href="/attorneys/sara">
-                <li>Sara Vargas</li>
-              </Link>
+              {attorneys.map((attorney, idx) => {
+                return (
+                  <Link
+                    href={`/attorneys/${attorney.split(" ").pop()}`}
+                    key={attorney + idx}
+                  >
+                    <p className="attorney-name">{attorney.toUpperCase()}</p>
+                  </Link>
+                );
+              })}
             </ul>
           </div>
         </Wapper>

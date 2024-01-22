@@ -1,25 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import attorneyArray from "../../../../public/attorneys.json";
 
 export default function SecondaryNav() {
+  const attorneys = attorneyArray.sort();
   return (
     <NameBox>
-      <Link href={"/attorneys/dally"}>
-        <p className="attorney-name">LORI E. DALLY</p>
-      </Link>
-      <Link href={"/attorneys/webb"}>
-        <p className="attorney-name">DANIEL WEBB</p>
-      </Link>
-      <Link href={"/attorneys/steven"}>
-        <p className="attorney-name">J. STEVEN KING</p>
-      </Link>
-      <Link href={"/attorneys/brewington"}>
-        <p className="attorney-name">MAX BREWINGTON</p>
-      </Link>
-      <Link href={"/attorneys/sara"}>
-        <p className="attorney-name">SARA VARGAS</p>
-      </Link>
+      {attorneys.map((attorney, idx) => {
+        return (
+          <Link
+            href={`/attorneys/${attorney.split(" ").pop()}`}
+            key={attorney + idx}
+          >
+            <p className="attorney-name">{attorney.toUpperCase()}</p>
+          </Link>
+        );
+      })}
     </NameBox>
   );
 }
