@@ -2,10 +2,9 @@ import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
 import footerLogo from "../../../public/images/logo-footer.svg";
-import attorneyArray from "../../../public/attorneys.json";
+import attorneys from "../../../public/attorneys.json";
 
 export default function Footer() {
-  const attorneys = attorneyArray.sort();
   return (
     <FooterContainer>
       <div className="container">

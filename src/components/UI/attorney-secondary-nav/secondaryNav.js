@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import attorneyArray from "../../../../public/attorneys.json";
+import attorneys from "../../../../public/attorneys.json";
 
 export default function SecondaryNav() {
-  const attorneys = attorneyArray.sort();
   return (
     <NameBox>
       {attorneys.map((attorney, idx) => {

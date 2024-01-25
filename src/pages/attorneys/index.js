@@ -3,11 +3,9 @@ import Link from "next/link";
 import Banner from "@/components/UI/banner/banner";
 import bannerImage from "../../../public/images/attorney-landing-banner.png";
 import WhyChooseUs from "@/components/main/why-choose-us/whyChooseUs";
-import attorneyArray from "../../../public/attorneys.json";
+import attorneys from "../../../public/attorneys.json";
 
 export default function Attorneys() {
-  const attorneys = attorneyArray.sort();
-
   return (
     <>
       <Banner

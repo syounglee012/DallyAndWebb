@@ -111,30 +111,87 @@ export default function Webb() {
           <span />
           <b>Publications and Seminars</b>
           <p>
-            Know When to Hold ‘Em, Know When to Fold ‘Em, Making & Responding to
-            Objections, Advanced Family Law 101 2022, Author & Speaker
+            Speaker, 2013 Family Law Essentials - Longview, “Rights, Powers and
+            Duties: Creative Solutions”
             <br />
-            Unique Possession Schedules, Advanced Family Law Drafting 2021,
-            Author & Speaker
             <br />
-            TAFLS Trial Institute 2021, Faculty & Speaker
+            Speaker, 2014 Family Law Essentials - Weatherford, “UCCJEA”
             <br />
-            Think (What Are You Trying to Do to Me): Overlooked SAPCR Issues,
-            Advanced Family Law Seminar 2020, Author & Speaker
             <br />
-            Initial Client Interview, Family Law Essentials 2020, Speaker
+            Speaker, 2014 Family Law Essentials - Laredo, “Alphabet Soup- UCCJEA
+            and UIFSA”
             <br />
-            Custody Cases on a Shoestring, Family Law Essentials 2019, Speaker
             <br />
-            Characterization of Property, Family Law Essentials 2018, Speaker
+            Speaker, 2018 Family Law Essentials - Midland, “Characterization of
+            Property”
             <br />
-            UCCJEA, Family Law Essentials 2014, Speaker
             <br />
-            Alphabet Soup - UCCJEA and UIFSA, Family Law Essentials 2014,
-            Speaker
+            Speaker, 2019 Family Law Essentials - Wichita Falls, “Custody Cases
+            on a Shoestring”
             <br />
-            Rights, Powers and Duties: Creative Solutions, Family Law Essentials
-            2013, Speaker
+            <br />
+            Speaker, 2019 Family Law Essentials - Cleburne, “Custody Cases on a
+            Shoestring”
+            <br />
+            <br />
+            Speaker, 2020 Family Law Essentials - El Paso, “Initial Client
+            Interview”
+            <br />
+            <br />
+            Speaker and Author, 2020 Advanced Family Law Seminar, “Think (What
+            Are You Trying to Do to Me): Overlooked SAPCR Issues”
+            <br />
+            <br />
+            Participant/Faculty, 2021 TAFLS Trial Institute, Horseshoe Bay
+            <br />
+            <br />
+            Advanced Drafting CLE Planning Committee - December 2021
+            <br />
+            <br />
+            Speaker and Author, December 2021, Advanced Family Law Drafting
+            Seminar, “Unique Possession Schedules”
+            <br />
+            <br />
+            Speaker and Author, April 2021, Marriage Dissolution Seminar,
+            “Closing the File: Turn Out the Lights the Party’s Over”
+            <br />
+            <br />
+            Speaker, March 2022, Wise, Jack, and Montague Counties Women’s Bar
+            Association, “Unique Possession Schedules”
+            <br />
+            <br />
+            Marriage Dissolution CLE Planning Committee - 2022
+            <br />
+            <br />
+            Co-Course Director, 2022 Family Law Essentials - Granbury
+            <br />
+            <br />
+            Speaker, 2022 Family Law Essentials - Granbury “Temporary Orders”
+            <br />
+            <br />
+            Moderator, 2022 Family Law Essentials -Granbury Judicial Panel
+            <br />
+            <br />
+            Speaker and Author, April 2022, Marriage Dissolutions, “Closing the
+            File”
+            <br />
+            <br />
+            Speaker and Author, August 2022, Advanced Family Law 101, “Making &
+            Responding to Objections”
+            <br />
+            <br />
+            Participant/Faculty, 2023 TAFLS Trial Institute, New Orleans
+            <br />
+            <br />
+            Speaker and Author, August 2023, Advanced Family Law 101, “Opening
+            Statements”
+            <br />
+            <br />
+            Speaker and Author, November 2023, Handling Your First (or Next)
+            Divorce, Third Party Intervenors
+            <br />
+            <br />
+            Participant/Faculty, 2024 TAFLS Trial Institute, Savannah, Georgia
           </p>
         </Content>
         <Image
