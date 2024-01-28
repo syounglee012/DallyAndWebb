@@ -11,7 +11,7 @@ export default function King() {
       <AttorneyBanner
         // src={banner}
         alt="J. Steven King banner image"
-        name={"J. STEVEN KING"}
+        name={"J. STEVEN KING, Of Counsel"}
         email={"STEVEN@TEXFAMILYLAWYER.COM"}
         priority={true}
       />

@@ -9,7 +9,11 @@ export default function SecondaryNav() {
       {attorneys.map((attorney, idx) => {
         return (
           <Link
-            href={`/attorneys/${attorney.split(" ").pop()}`}
+            href={`/attorneys/${
+              attorney.substring(0, 1) == "j"
+                ? attorney.split(", ")[0].split(" ").pop()
+                : attorney.split(" ").pop()
+            }`}
             key={attorney + idx}
           >
             <p className="attorney-name">{attorney.toUpperCase()}</p>
