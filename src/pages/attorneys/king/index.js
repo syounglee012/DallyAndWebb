@@ -96,9 +96,6 @@ export default function King() {
             Law Seminar on Practical Approaches to Divorce Law 1992
             <br />
             <br />
-            Delta Gamma Fraternity - TCU, previous House Management Advisor
-            <br />
-            <br />
             Author/Speaker, Discovery Trends: Objections, Sanctions, and
             Supplementation, Advanced Family Law Course for Legal Assistants
             1995
