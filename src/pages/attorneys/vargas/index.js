@@ -3,7 +3,7 @@ import styled from "styled-components";
 import AttorneyBanner from "@/components/UI/attorney-banner/attorneyBanner";
 import banner from "../../../../public/images/sara-banner.png";
 import SecondaryNav from "@/components/UI/attorney-secondary-nav/secondaryNav";
-import profile from "../../../../public/images/sara.jpg";
+import profile from "../../../../public/images/Sara.jpeg";
 export default function Vargas() {
   return (
     <Container>
@@ -12,8 +12,9 @@ export default function Vargas() {
         alt="Sara banner image"
         name={"SARA VARGAS"}
         email={"SARA@TEXFAMILYLAWYER.COM"}
-        top={"-28px"}
+        top={"15px"}
         mobileTop={"15px"}
+        maxWidth={"440px"}
         priority={true}
       />
       <SecondaryNav />
@@ -100,7 +101,7 @@ export default function Vargas() {
             height: "auto",
             maxHeight: "472px",
             width: "100%",
-            maxWidth: "418px",
+            maxWidth: "460px",
           }}
           priority={true}
         />

@@ -2,17 +2,19 @@ import Image from "next/image";
 import styled from "styled-components";
 import SecondaryNav from "@/components/UI/attorney-secondary-nav/secondaryNav";
 import AttorneyBanner from "@/components/UI/attorney-banner/attorneyBanner";
-import banner from "../../../../public/images/Dally_Banner.png";
-// import profile from "../../../../public/images/Dally_profile.png";
+import banner from "../../../../public/images/King_banner.png";
+import profile from "../../../../public/images/King_profile.png";
 
 export default function King() {
   return (
     <Container>
       <AttorneyBanner
-        // src={banner}
+        src={banner}
         alt="J. Steven King banner image"
         name={"J. STEVEN KING, Of Counsel"}
         email={"STEVEN@TEXFAMILYLAWYER.COM"}
+        maxWidth={"472px"}
+        top={"11px"}
         priority={true}
       />
       <SecondaryNav />
@@ -283,7 +285,7 @@ export default function King() {
           </p>
         </Content>
         <Image
-          // src={profile}
+          src={profile}
           alt="J. Steven King profile picture"
           className="item"
           quality={100}
@@ -291,7 +293,7 @@ export default function King() {
             height: "auto",
             maxHeight: "472px",
             width: "100%",
-            maxWidth: "418px",
+            maxWidth: "470px",
           }}
           priority={true}
         />

@@ -3,7 +3,12 @@ import styled from "styled-components";
 
 export default function attorneyBanner(props) {
   return (
-    <Container top={props.top} mobileTop={props.mobileTop}>
+    <Container
+      maxWidth={props.maxWidth}
+      top={props.top}
+      mobileTop={props.mobileTop}
+      right={props.right}
+    >
       <Title>
         <p className="header-white-large">{props.name}</p>
         <p className="practice-area">ATTORNEY & COUNSELOR AT LAW</p>
@@ -29,10 +34,10 @@ const Container = styled.div`
   background-color: #272d47;
   .attorney-banner-img {
     width: 100%;
-    max-width: 552px;
+    max-width: ${(props) => (props.maxWidth ? props.maxWidth : "452px")};
     height: auto;
     position: absolute;
-    right: 6rem;
+    right: 8rem;
     z-index: 2;
     top: ${(props) => (props.top ? props.top : "-18px")};
   }
@@ -61,7 +66,13 @@ const Title = styled.div`
     letter-spacing: 0.15em;
     margin-top: 1rem;
   }
-
+  @media (max-width: 1510px) {
+    .header-white-large {
+      font-size: 32px;
+      letter-spacing: 0.2em;
+      padding-bottom: 0.2rem;
+    }
+  }
   @media (max-width: 1300px) {
     top: 0;
     left: 2rem;

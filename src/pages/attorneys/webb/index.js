@@ -12,6 +12,7 @@ export default function Webb() {
         src={banner}
         alt="Webb banner image"
         name={"DANIEL P. WEBB"}
+        top={"6px"}
         email={"DANIEL@TEXFAMILYLAWYER.COM"}
         priority={true}
       />
@@ -202,7 +203,7 @@ export default function Webb() {
             height: "auto",
             maxHeight: "472px",
             width: "100%",
-            maxWidth: "418px",
+            maxWidth: "440px",
           }}
           priority={true}
         />

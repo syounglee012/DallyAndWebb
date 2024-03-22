@@ -11,7 +11,8 @@ export default function Brewington() {
         alt="Brewington banner image"
         name={"MAX BREWINGTON"}
         email={"MAX@TEXFAMILYLAWYER.COM"}
-        top={"-9px"}
+        maxWidth={"512px"}
+        top={"21px"}
         mobileTop={"15px"}
         priority={true}
       />
