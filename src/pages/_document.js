@@ -34,6 +34,7 @@ export default class _Document extends Document {
             rel="stylesheet"
           />
         </Head>
+
         <body>
           <Main />
           <NextScript />

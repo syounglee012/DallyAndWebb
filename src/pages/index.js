@@ -14,7 +14,7 @@ export default function Home() {
             src={mainPic}
             alt="main content area image"
             quality={100}
-            priority={true}
+            loading="eager"
             className="main-image item"
           />
           <MainText className="item">

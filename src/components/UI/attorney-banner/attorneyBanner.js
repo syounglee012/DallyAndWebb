@@ -17,7 +17,7 @@ export default function attorneyBanner(props) {
         className="attorney-banner-img"
         src={props.src}
         alt={props.alt}
-        priority
+        loading="eager"
       />
 
       <Contact>

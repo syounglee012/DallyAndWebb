@@ -15,7 +15,6 @@ export default function King() {
         email={"STEVEN@TEXFAMILYLAWYER.COM"}
         maxWidth={"472px"}
         top={"11px"}
-        priority={true}
       />
       <SecondaryNav />
       <div className="center-wrapper">
@@ -295,7 +294,7 @@ export default function King() {
             width: "100%",
             maxWidth: "470px",
           }}
-          priority={true}
+          loading="lazy"
         />
       </div>
     </Container>

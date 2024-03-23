@@ -18,13 +18,15 @@ function MyComponent() {
   const offices = [
     {
       id: 0,
-      lat: 32.71069,
-      lng: -97.38585,
+      lat: 32.71068,
+      lng: -97.38575,
+      title: "Main Office",
     },
     {
       id: 1,
       lat: 32.44201,
       lng: -97.79567,
+      title: "Branch Office",
     },
   ];
 
@@ -55,7 +57,11 @@ function MyComponent() {
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={zoom}>
         {offices &&
           offices.map((office, idx) => (
-            <Marker key={idx} position={{ lat: office.lat, lng: office.lng }} />
+            <Marker
+              key={idx}
+              position={{ lat: office.lat, lng: office.lng }}
+              title={office.title}
+            />
           ))}
       </GoogleMap>
     </LoadScript>

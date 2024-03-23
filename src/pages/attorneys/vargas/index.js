@@ -103,7 +103,7 @@ export default function Vargas() {
             width: "100%",
             maxWidth: "460px",
           }}
-          priority={true}
+          loading="lazy"
         />
       </div>
     </Container>

@@ -205,7 +205,7 @@ export default function Webb() {
             width: "100%",
             maxWidth: "440px",
           }}
-          priority={true}
+          loading="lazy"
         />
       </div>
     </Container>

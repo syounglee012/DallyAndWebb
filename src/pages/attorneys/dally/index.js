@@ -121,7 +121,7 @@ export default function Dally() {
             width: "100%",
             maxWidth: "418px",
           }}
-          priority={true}
+          loading="lazy"
         />
       </div>
     </Container>
