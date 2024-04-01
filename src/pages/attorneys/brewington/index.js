@@ -3,6 +3,8 @@ import styled from "styled-components";
 import AttorneyBanner from "@/components/UI/attorney-banner/attorneyBanner";
 import banner from "../../../../public/images/brewington_banner.png";
 import SecondaryNav from "@/components/UI/attorney-secondary-nav/secondaryNav";
+import profile from "../../../../public/images/max_profile.png";
+
 export default function Brewington() {
   return (
     <Container>
@@ -82,6 +84,18 @@ export default function Brewington() {
             Bar Association
           </p>
         </Content>
+        <Image
+          src={profile}
+          alt="Max profile picture"
+          className="item"
+          style={{
+            height: "auto",
+            maxHeight: "472px",
+            width: "100%",
+            maxWidth: "440px",
+          }}
+          loading="lazy"
+        />
       </div>
     </Container>
   );
@@ -101,12 +115,17 @@ const Container = styled.div`
     .center-wrapper {
       padding: 0 2rem;
     }
+    .item:nth-child(2) {
+      order: -1;
+      margin: 1rem 0 2rem;
+    }
   }
 `;
 
 const Content = styled.div`
   display: inline-block;
   width: 100%;
+  max-width: 752px;
   & b {
     font-weight: 700;
     display: block;
