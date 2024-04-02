@@ -86,11 +86,11 @@ const Title = styled.div`
       margin-top: 0.5rem;
     }
   }
-  @media (max-width: 572px) {
+  @media (max-width: 672px) {
     top: 2rem;
     left: 2rem;
     .header-white-large {
-      font-size: 26px;
+      font-size: 24px;
       line-height: normal;
       letter-spacing: 5px;
       border-bottom: 1px solid #67318d;
@@ -99,7 +99,7 @@ const Title = styled.div`
     .practice-area {
       font-size: 14px;
       letter-spacing: 2px;
-      margin-top: 0.5rem;
+      margin-top: 0rem;
     }
   }
 `;
@@ -128,9 +128,9 @@ const Contact = styled.div`
     }
   }
 
-  @media (max-width: 572px) {
+  @media (max-width: 672px) {
     .contact-info {
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 `;

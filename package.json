@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+ 
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
     "@react-google-maps/api": "^2.18.1",
@@ -28,5 +29,6 @@
     "react-google-recaptcha-v3": "^1.10.1",
     "react-toastify": "^9.1.2",
     "styled-components": "^5.3.9"
-  }
+  },
+  "license": "MIT"
 }
