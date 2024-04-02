@@ -3,7 +3,12 @@ import styled from "styled-components";
 
 export default function attorneyBanner(props) {
   return (
-    <Container top={props.top} mobileTop={props.mobileTop}>
+    <Container
+      maxWidth={props.maxWidth}
+      top={props.top}
+      mobileTop={props.mobileTop}
+      right={props.right}
+    >
       <Title>
         <p className="header-white-large">{props.name}</p>
         <p className="practice-area">ATTORNEY & COUNSELOR AT LAW</p>
@@ -12,7 +17,7 @@ export default function attorneyBanner(props) {
         className="attorney-banner-img"
         src={props.src}
         alt={props.alt}
-        priority
+        loading="eager"
       />
 
       <Contact>
@@ -29,10 +34,10 @@ const Container = styled.div`
   background-color: #272d47;
   .attorney-banner-img {
     width: 100%;
-    max-width: 552px;
+    max-width: ${(props) => (props.maxWidth ? props.maxWidth : "452px")};
     height: auto;
     position: absolute;
-    right: 6rem;
+    right: 8rem;
     z-index: 2;
     top: ${(props) => (props.top ? props.top : "-18px")};
   }
@@ -61,7 +66,13 @@ const Title = styled.div`
     letter-spacing: 0.15em;
     margin-top: 1rem;
   }
-
+  @media (max-width: 1510px) {
+    .header-white-large {
+      font-size: 32px;
+      letter-spacing: 0.2em;
+      padding-bottom: 0.2rem;
+    }
+  }
   @media (max-width: 1300px) {
     top: 0;
     left: 2rem;
@@ -75,11 +86,11 @@ const Title = styled.div`
       margin-top: 0.5rem;
     }
   }
-  @media (max-width: 572px) {
+  @media (max-width: 672px) {
     top: 2rem;
     left: 2rem;
     .header-white-large {
-      font-size: 26px;
+      font-size: 24px;
       line-height: normal;
       letter-spacing: 5px;
       border-bottom: 1px solid #67318d;
@@ -88,7 +99,7 @@ const Title = styled.div`
     .practice-area {
       font-size: 14px;
       letter-spacing: 2px;
-      margin-top: 0.5rem;
+      margin-top: 0rem;
     }
   }
 `;
@@ -117,9 +128,9 @@ const Contact = styled.div`
     }
   }
 
-  @media (max-width: 572px) {
+  @media (max-width: 672px) {
     .contact-info {
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 `;

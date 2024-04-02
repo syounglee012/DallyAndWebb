@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Link from "next/link";
 import Banner from "@/components/UI/banner/banner";
 import bannerImage from "../../../public/images/attorney-landing-banner.png";
 import GoogleMap from "@/components/google-map/googleMap";

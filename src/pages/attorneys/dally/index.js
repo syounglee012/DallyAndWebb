@@ -11,6 +11,8 @@ export default function Dally() {
       <AttorneyBanner
         src={banner}
         alt="mally banner image"
+        maxWidth={"512px"}
+        top={"12px"}
         name={"LORI E. DALLY"}
         email={"LORI@TEXFAMILYLAWYER.COM"}
         priority={true}
@@ -119,7 +121,7 @@ export default function Dally() {
             width: "100%",
             maxWidth: "418px",
           }}
-          priority={true}
+          loading="lazy"
         />
       </div>
     </Container>
