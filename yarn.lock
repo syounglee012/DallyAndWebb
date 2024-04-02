@@ -2702,6 +2702,7 @@
   "integrity" "sha512-Aj3kb13B75DQBo2oRwRa/APdB5rSmwUfN5exyarpX+x/tlM/rwZA2vVk2vQgVSP6WKaZJHWwiFrzgHt+CLtB4A=="
   "resolved" "https://registry.npmjs.org/styled-components/-/styled-components-5.3.9.tgz"
   "version" "5.3.9"
+
   dependencies:
     "@babel/helper-module-imports" "^7.0.0"
     "@babel/traverse" "^7.4.5"
