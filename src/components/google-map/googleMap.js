@@ -32,8 +32,8 @@ function MyComponent() {
     },
     {
       id: 1,
-      name: "Grapevine Office",
-      address: "Grapevine, TX 76048",
+      name: "Granbury Office",
+      address: "Granbury, TX 76048",
       lat: 32.44201,
       lng: -97.79567,
       link: "https://maps.app.goo.gl/PmtpEgnZ2SHESW836",
