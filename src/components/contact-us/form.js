@@ -25,26 +25,26 @@ export default function Form() {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    return toast.error(
-      `We apologize for the inconvenience. We are currently experiencing a technical problem.
-    \n Please submit your information directly to lori@texfamilylawyer.com.
-    \n Thank you for your understanding.`,
-      {
-        position: "top-center",
-        style: {
-          width: "400px",
-          fontFamily: "Montserrat",
-          whiteSpace: "pre-line",
-        },
-      }
-    );
-    // if (!executeRecaptcha) {
-    //   console.log("Execute recaptcha not yet available");
-    //   return;
-    // }
-    // executeRecaptcha("handleSubmit").then((token) => {
-    //   handleSubmit(token);
-    // });
+    // return toast.error(
+    //   `We apologize for the inconvenience. We are currently experiencing a technical problem.
+    // \n Please submit your information directly to lori@texfamilylawyer.com.
+    // \n Thank you for your understanding.`,
+    //   {
+    //     position: "top-center",
+    //     style: {
+    //       width: "400px",
+    //       fontFamily: "Montserrat",
+    //       whiteSpace: "pre-line",
+    //     },
+    //   }
+    // );
+    if (!executeRecaptcha) {
+      console.log("Execute recaptcha not yet available");
+      return;
+    }
+    executeRecaptcha("handleSubmit").then((token) => {
+      handleSubmit(token);
+    });
   };
 
   const handleSubmit = async (token) => {
