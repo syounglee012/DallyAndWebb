@@ -11,14 +11,18 @@ export default function attorneyBanner(props) {
     >
       <Title>
         <p className="header-white-large">{props.name}</p>
-        <p className="practice-area">ATTORNEY & COUNSELOR AT LAW</p>
+        <p className="practice-area">
+          {props.title || "ATTORNEY & COUNSELOR AT LAW"}
+        </p>
       </Title>
-      <Image
-        className="attorney-banner-img"
-        src={props.src}
-        alt={props.alt}
-        loading="eager"
-      />
+      {props.src && (
+        <Image
+          className="attorney-banner-img"
+          src={props.src}
+          alt={props.alt}
+          loading="eager"
+        />
+      )}
 
       <Contact>
         <p className="contact-info">817-409-1136</p>
@@ -37,7 +41,7 @@ const Container = styled.div`
     max-width: ${(props) => (props.maxWidth ? props.maxWidth : "452px")};
     height: auto;
     position: absolute;
-    right: 8rem;
+    right: ${(props) => (props.right ? props.right : "8rem")};
     z-index: 2;
     top: ${(props) => (props.top ? props.top : "-18px")};
   }
