@@ -87,7 +87,7 @@ const Container = styled.div`
       height: 44px;
       box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
       display: block;
-      margin-bottom: 2rem;
+      margin: 2rem auto;
       margin-left: auto;
     }
   }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import SecondaryNav from "@/components/UI/attorney-secondary-nav/secondaryNav";
 import AttorneyBanner from "@/components/UI/attorney-banner/attorneyBanner";
+import AttorneyDropDown from "@/components/mobile-dropdown-menu/attorneyDropDown";
 import banner from "../../../../public/images/copp_banner.png";
 
 export default function Dally() {
@@ -18,7 +19,6 @@ export default function Dally() {
         title={"SENIOR ASSOCIATE ATTORNEY"}
         priority={true}
       />
-      <SecondaryNav />
       <div className="center-wrapper">
         <Content className="item">
           <p>
@@ -95,6 +95,12 @@ export default function Dally() {
             the Board Certification Exam&quot;
           </p>
         </Content>
+        <div className="side-nav">
+          <SecondaryNav />
+        </div>
+        <span className="mobile-dropdown">
+          <AttorneyDropDown title={"Attorneys"} />
+        </span>
       </div>
     </Container>
   );
@@ -108,16 +114,36 @@ const Container = styled.div`
     padding: 4rem 0;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
+  }
+  .side-nav {
+    margin-left: auto;
+    display: inline-flex;
+  }
+
+  .mobile-dropdown {
+    display: none;
   }
 
   @media (max-width: 1300px) {
     .center-wrapper {
       padding: 2rem;
     }
-    .item:nth-child(2) {
-      order: -1;
-      margin: 1rem 0 2rem;
+    .item {
+      order: 2;
+    }
+    .side-nav {
+      display: none;
+    }
+    .mobile-dropdown {
+      width: 100%;
+      max-width: 492px;
+      height: 44px;
+      box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin: 0 auto 2rem auto;
+      order: 1;
     }
   }
 `;

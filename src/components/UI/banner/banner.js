@@ -52,7 +52,7 @@ const Container = styled.div`
 const Title = styled.p`
   position: absolute;
   bottom: 9px;
-  left: ${(props) => (props.left ? props.left : "200px")};
+  left: ${(props) => (props.left ? props.left : "calc(48.5% - 615px)")};
   width: fit-content;
   background-color: rgba(103, 49, 141, 0.7);
   padding: 1rem 3rem;
@@ -61,8 +61,14 @@ const Title = styled.p`
   letter-spacing: 0.25em;
   color: #ffffff;
 
+  @media (max-width: 1300px) {
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+  }
+
   @media (max-width: 768px) {
-    left: 50px;
     font-size: 12px;
     padding: 0.5rem 1rem;
   }
