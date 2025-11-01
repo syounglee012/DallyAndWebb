@@ -88,7 +88,6 @@ const Container = styled.div`
       box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
       display: block;
       margin: 2rem auto;
-      margin-left: auto;
     }
   }
 `;
