@@ -25,24 +25,24 @@ export default function Form() {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    return toast.error(
-      `We apologize for the inconvenience. Our contact form is temporarily unavailable.\n\nPlease call us at 817-409-1136 or email LORI@TEXFAMILYLAWYER.COM for immediate assistance. \n\n Thank you for your patience.`,
-      {
-        position: "top-center",
-        style: {
-          width: "400px",
-          fontFamily: "Montserrat",
-          whiteSpace: "pre-line",
-        },
-      }
-    );
-    // if (!executeRecaptcha) {
-    //   console.log("Execute recaptcha not yet available");
-    //   return;
-    // }
-    // executeRecaptcha("handleSubmit").then((token) => {
-    //   handleSubmit(token);
-    // });
+    // return toast.error(
+    //   `We apologize for the inconvenience. Our contact form is temporarily unavailable.\n\nPlease call us at 817-409-1136 or email LORI@TEXFAMILYLAWYER.COM for immediate assistance. \n\n Thank you for your patience.`,
+    //   {
+    //     position: "top-center",
+    //     style: {
+    //       width: "400px",
+    //       fontFamily: "Montserrat",
+    //       whiteSpace: "pre-line",
+    //     },
+    //   }
+    // );
+    if (!executeRecaptcha) {
+      console.log("Execute recaptcha not yet available");
+      return;
+    }
+    executeRecaptcha("handleSubmit").then((token) => {
+      handleSubmit(token);
+    });
   };
 
   const handleSubmit = async (token) => {
