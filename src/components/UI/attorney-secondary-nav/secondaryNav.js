@@ -25,14 +25,14 @@ export default function SecondaryNav() {
 }
 const NameBox = styled.div`
   width: 80%;
-  max-width: 1230px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
   border-top: 1px solid #67318d;
   letter-spacing: 2px;
-  margin: 4rem auto 0;
+  padding-top: 1rem;
+  gap: 1rem;
 
   .attorney-name {
     color: #808080;

@@ -4,6 +4,7 @@ import Banner from "@/components/UI/banner/banner";
 import bannerImage from "../../../public/images/attorney-landing-banner.png";
 import WhyChooseUs from "@/components/main/why-choose-us/whyChooseUs";
 import attorneys from "../../../public/attorneys.json";
+import AttorneyDropDown from "@/components/mobile-dropdown-menu/attorneyDropDown";
 
 export default function Attorneys() {
   return (
@@ -31,6 +32,9 @@ export default function Attorneys() {
               );
             })}
           </NameBox>
+          <span className="mobile-dropdown">
+            <AttorneyDropDown title={"Attorneys"} />
+          </span>
           <p className="body-copy">
             At Dally & Webb Family Law, PLLC, we are dedicated to providing you
             with an unparalleled level of legal representation for all your
@@ -67,11 +71,24 @@ const Container = styled.div`
     max-width: 800px;
   }
 
+  .mobile-dropdown {
+    display: none;
+  }
+
   @media (max-width: 1300px) {
     .center-wrapper {
       flex-direction: column;
       align-items: center;
       padding: 3rem 2rem 5rem;
+    }
+    .mobile-dropdown {
+      width: 100%;
+      max-width: 492px;
+      height: 44px;
+      box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin-bottom: 2rem;
+      margin-left: auto;
     }
   }
 `;
@@ -84,7 +101,9 @@ const NameBox = styled.div`
   justify-content: space-evenly;
   align-items: flex-start;
   border-top: 1px solid #67318d;
+  padding-top: 1rem;
   letter-spacing: 2px;
+  gap: 1rem;
 
   .attorney-name {
     color: #808080;
@@ -96,11 +115,6 @@ const NameBox = styled.div`
   }
 
   @media (max-width: 1300px) {
-    margin-bottom: 2rem;
-    max-width: 350px;
-
-    .attorney-name {
-      font-size: 14px;
-    }
+    display: none;
   }
 `;
