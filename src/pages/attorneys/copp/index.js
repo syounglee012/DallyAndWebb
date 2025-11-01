@@ -13,7 +13,7 @@ export default function Dally() {
         alt="Copp banner image"
         maxWidth={"434px"}
         top={"12px"}
-        right={"12rem"}
+        right={"23rem"}
         name={"LAURA E. COPP"}
         email={"LAURA@TEXFAMILYLAWYER.COM"}
         title={"SENIOR ASSOCIATE ATTORNEY"}

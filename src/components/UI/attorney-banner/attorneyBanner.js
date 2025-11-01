@@ -43,7 +43,7 @@ const Container = styled.div`
     max-width: ${(props) => (props.maxWidth ? props.maxWidth : "452px")};
     height: auto;
     position: absolute;
-    right: ${(props) => (props.right ? props.right : "8rem")};
+    right: ${(props) => (props.right ? props.right : "20rem")};
     z-index: 2;
     top: ${(props) => (props.top ? props.top : "-18px")};
   }
