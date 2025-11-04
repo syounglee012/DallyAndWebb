@@ -16,7 +16,7 @@ export default function Brewington() {
         maxWidth={"512px"}
         top={"21px"}
         mobileTop={"15px"}
-        right={"16rem"}
+        right={"8vw"}
         priority={true}
       />
       <div className="center-wrapper">

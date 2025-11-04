@@ -192,4 +192,31 @@ const DropDown = styled.div`
       color: #c293ff;
     }
   }
+
+  @media (max-width: 700px) {
+    .drop-down__header__title {
+      & p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    .drop-down__body__item {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .drop-down__header__title {
+      & p {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+    .drop-down__body__item {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
 `;

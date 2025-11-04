@@ -13,6 +13,7 @@ export default function Webb() {
         alt="Webb banner image"
         name={"DANIEL P. WEBB"}
         top={"6px"}
+        right={"12vw"}
         email={"DANIEL@TEXFAMILYLAWYER.COM"}
         priority={true}
       />

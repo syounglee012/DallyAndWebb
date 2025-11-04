@@ -16,7 +16,7 @@ export default function King() {
         email={"STEVEN@TEXFAMILYLAWYER.COM"}
         maxWidth={"472px"}
         top={"11px"}
-        right={"14rem"}
+        right={"5vw"}
       />
       <div className="center-wrapper">
         <Content className="item">

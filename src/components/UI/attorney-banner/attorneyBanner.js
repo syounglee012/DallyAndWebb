@@ -38,12 +38,13 @@ const Container = styled.div`
   height: 400px;
   position: relative;
   background-color: #272d47;
+
   .attorney-banner-img {
     width: 100%;
     max-width: ${(props) => (props.maxWidth ? props.maxWidth : "452px")};
     height: auto;
     position: absolute;
-    right: ${(props) => (props.right ? props.right : "20rem")};
+    right: ${(props) => (props.right ? props.right : "10rem")};
     z-index: 2;
     top: ${(props) => (props.top ? props.top : "-18px")};
   }
