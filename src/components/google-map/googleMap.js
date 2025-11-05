@@ -13,6 +13,9 @@ function MyComponent() {
     width: "100%",
     maxWidth: "600px",
     height: "500px",
+    display: "block",
+    position: "relative",
+    overflow: "hidden",
   };
 
   const position = {
@@ -54,7 +57,11 @@ function MyComponent() {
   }, []);
 
   return (
-    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_API}>
+    <LoadScript
+      googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_API}
+      loadingElement={<div>Loading...</div>}
+      libraries={["marker"]}
+    >
       <GoogleMap mapContainerStyle={containerStyle} center={position} zoom={9}>
         {places.map((place) => (
           <MarkerF

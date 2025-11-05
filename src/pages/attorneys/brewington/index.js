@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styled from "styled-components";
 import AttorneyBanner from "@/components/UI/attorney-banner/attorneyBanner";
-import banner from "../../../../public/images/brewington_banner.png";
 import SecondaryNav from "@/components/UI/attorney-secondary-nav/secondaryNav";
-import profile from "../../../../public/images/max_profile.png";
+import AttorneyDropDown from "@/components/mobile-dropdown-menu/attorneyDropDown";
+import banner from "../../../../public/images/brewington_banner.png";
 
 export default function Brewington() {
   return (
@@ -16,9 +16,9 @@ export default function Brewington() {
         maxWidth={"512px"}
         top={"21px"}
         mobileTop={"15px"}
+        right={"8vw"}
         priority={true}
       />
-      <SecondaryNav />
       <div className="center-wrapper">
         <Content className="item">
           <p>
@@ -84,18 +84,12 @@ export default function Brewington() {
             Bar Association
           </p>
         </Content>
-        <Image
-          src={profile}
-          alt="Max profile picture"
-          className="item"
-          style={{
-            height: "auto",
-            maxHeight: "472px",
-            width: "100%",
-            maxWidth: "440px",
-          }}
-          loading="lazy"
-        />
+        <div className="side-nav">
+          <SecondaryNav />
+        </div>
+        <span className="mobile-dropdown">
+          <AttorneyDropDown title={"Attorneys"} />
+        </span>
       </div>
     </Container>
   );
@@ -105,19 +99,40 @@ const Container = styled.div`
   .center-wrapper {
     width: 100%;
     max-width: 1230px;
-    margin: 4rem auto;
+    margin: 0 auto;
+    padding: 4rem 0;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
+  }
+  .side-nav {
+    margin-left: auto;
+    display: inline-flex;
+  }
+
+  .mobile-dropdown {
+    display: none;
   }
 
   @media (max-width: 1300px) {
     .center-wrapper {
-      padding: 0 2rem;
+      padding: 2rem;
     }
-    .item:nth-child(2) {
-      order: -1;
-      margin: 1rem 0 2rem;
+    .item {
+      order: 2;
+    }
+    .side-nav {
+      display: none;
+    }
+    .mobile-dropdown {
+      width: 100%;
+      max-width: 492px;
+      height: 44px;
+      box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin: 0 auto 2rem auto;
+      order: 1;
     }
   }
 `;

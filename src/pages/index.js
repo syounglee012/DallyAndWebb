@@ -144,6 +144,7 @@ const MainText = styled.div`
     font-style: normal;
     font-size: 20px;
     line-height: 32px;
+    margin-top: 1rem;
   }
 
   @media (max-width: 1400px) {
@@ -162,7 +163,7 @@ const MainText = styled.div`
   }
   @media (max-width: 795px) {
     padding: 1rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     .main-top-text {
       font-size: 16px;
       letter-spacing: 4px;

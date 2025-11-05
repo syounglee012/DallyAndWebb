@@ -5,36 +5,40 @@ import styled from "styled-components";
 import "../styles/globals.css";
 import ContactInfos from "@/components/contact-us/contactInfo";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function App({ Component, pageProps }) {
   const siteKey = process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY;
   return (
-    <GoogleReCaptchaProvider
-      reCaptchaKey={siteKey}
-      scriptProps={{
-        async: false,
-        defer: false,
-        appendTo: "head",
-        nonce: undefined,
-      }}
-    >
-      <Head>
-        <title>Dally and Webb</title>
-        <meta name="description" content="A lawfrim website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <>
+      <Analytics />
+      <GoogleReCaptchaProvider
+        reCaptchaKey={siteKey}
+        scriptProps={{
+          async: false,
+          defer: false,
+          appendTo: "head",
+          nonce: undefined,
+        }}
+      >
+        <Head>
+          <title>Dally and Webb</title>
+          <meta name="description" content="A lawfrim website" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="icon" href="/dw.svg" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      </Head>
+          <link rel="icon" href="/dw.svg" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        </Head>
 
-      <Container>
-        <Navigation />
-        <Component {...pageProps} />
-        <ContactInfos />
-        <Footer />
-      </Container>
-    </GoogleReCaptchaProvider>
+        <Container>
+          <Navigation />
+          <Component {...pageProps} />
+          <ContactInfos />
+          <Footer />
+        </Container>
+      </GoogleReCaptchaProvider>
+    </>
   );
 }
 
