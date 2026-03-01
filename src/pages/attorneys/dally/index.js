@@ -33,7 +33,7 @@ export default function Dally() {
             Wesleyan School of Law (now Texas A&M School of Law). My husband and
             I are avid TCU fans and never miss a game. When we are not cheering
             on the Horned Frogs, you can usually find me spending quality time
-            with my husband, three daughters, two dogs and one cat.
+            with my husband, three daughters, two dogs and two cats.
           </p>
           <span />
           <b>Education</b>
@@ -73,32 +73,29 @@ export default function Dally() {
             Tarrant County Bar Association <br />
             Tarrant County Family Law Bar Association <br />
             State Bar of Texas <br />
-            Family Law Section, State Bar of Texas
+            Family Law Section, State Bar of Texas <br />
+            Texas Academy of Family Law Specialists - Member
           </p>
           <span />
           <b>Awards</b>
           <p>
+            2019-2025 Texas Rising Stars, Super Lawyers <br />
+            2017-2025 Fort Worth Magazine’s Top Attorney - Family Law <br />
             2021 Top Women Attorney in Texas 2020, <em>Texas Monthly</em> <br />
-            2021 Top Young Attorney in Texas,<em>Texas Monthly</em> <br />
+            2021 Top Young Attorney in Texas, <em>Texas Monthly</em> <br />
             2016-2021 AVVO Client’s Choice <br />
-            2019-2021 Texas Rising Stars, Super Lawyers <br />
             2020 Top Women Attorney in Texas Rising Stars,{" "}
             <em>Texas Monthly</em> <br />
             2020 Texas Outstanding Young Attorney, <em>Texas Monthly</em> <br />
-            2017-2020 Fort Worth Magazine’s Top Attorney - Family Law <br />
             2019 Top Attorney - Texas Outstanding Young Women Lawyers,{" "}
             <em>Texas Monthly</em> <br />
             2019 Top Attorney - Texas Outstanding Young Lawyers,{" "}
             <em>Texas Monthly</em>
-            <br />
-            10 Best Attorneys - Texas Family Law by The American Institute of
-            Family Law Attorneys <br />
-            2017 Top Attorneys of North America
           </p>
           <span />
           <b>Community Involvement</b>
           <p>
-            Fort Worth Pregnancy Center, President
+            Fort Worth Pregnancy Center, Past President
             <br />
             Delta Gamma Fraternity - TCU, previous House Management Advisor
           </p>

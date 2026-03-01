@@ -113,6 +113,12 @@ const ImageContainer = styled.div`
       order: -1;
     }
   }
+
+  @media (max-width: 480px) {
+    .wrapper {
+      bottom: 2rem;
+    }
+  }
 `;
 
 const MainText = styled.div`
