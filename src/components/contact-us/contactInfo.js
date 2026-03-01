@@ -28,20 +28,6 @@ export default function ContactInfos() {
               />
               <p className="office-infos">FORT WORTH - 817-409-1136</p>
               <br />
-              <Image
-                src={PhoneIcon}
-                alt="Phone icon"
-                width={15}
-                height={15}
-                style={{
-                  width: "auto",
-                  height: "auto",
-                  marginRight: "2rem",
-                  display: "inline-block",
-                }}
-              />
-              <p className="office-infos">GRANBURY - 817-408-3541</p>
-              <br />
 
               <Image
                 src={EmailIcon}

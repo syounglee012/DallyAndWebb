@@ -3,7 +3,7 @@ import { sendEmail } from "../../lib/sendgrid";
 export default async function contact(req, res) {
   const data = req.body;
 
-  if (!data.name || !data.email || !data.phone || !data.office || !data.area) {
+  if (!data.name || !data.email || !data.phone || !data.area) {
     return res.status(400).json({ error: "Please fill out all fields" });
   }
 
@@ -24,7 +24,6 @@ export default async function contact(req, res) {
               <p>Phone: ${data.phone}</p>
               <p>Email: ${data.email}</p>
               <p>Name: ${data.name}</p>
-              <p>Office Preference: ${data.office}</p>
               <p>Area of Interest: ${data.area}</p>
               `,
   };
