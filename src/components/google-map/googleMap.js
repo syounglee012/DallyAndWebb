@@ -20,7 +20,7 @@ function MyComponent() {
 
   const position = {
     lat: 32.7073,
-    lng: -97.5502,
+    lng: -97.38585,
   };
 
   const [selectedPlace, setSelectedPlace] = useState(null);
@@ -33,14 +33,6 @@ function MyComponent() {
       lng: -97.38585,
       link: "https://maps.app.goo.gl/RShyRCH7VmVCL5rv8",
     },
-    {
-      id: 1,
-      name: "Granbury Office",
-      address: "Granbury, TX 76048",
-      lat: 32.44201,
-      lng: -97.79567,
-      link: "https://maps.app.goo.gl/PmtpEgnZ2SHESW836",
-    },
   ];
   useEffect(() => {
     if (
@@ -50,7 +42,7 @@ function MyComponent() {
       window.history.replaceState(
         {},
         "",
-        `${window.location.pathname}?refreshed=yes`
+        `${window.location.pathname}?refreshed=yes`,
       );
       window.location.reload();
     }
@@ -62,7 +54,7 @@ function MyComponent() {
       loadingElement={<div>Loading...</div>}
       libraries={["marker"]}
     >
-      <GoogleMap mapContainerStyle={containerStyle} center={position} zoom={9}>
+      <GoogleMap mapContainerStyle={containerStyle} center={position} zoom={12}>
         {places.map((place) => (
           <MarkerF
             key={place.id}

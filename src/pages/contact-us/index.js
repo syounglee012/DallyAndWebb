@@ -35,17 +35,6 @@ export default function ContactUs() {
               </p>
               <p className="italic">*Principal Office</p>
             </div>
-            <div className="inside-wrapper">
-              <p className="location-title">GRANBURY OFFICE</p>
-              <span />
-              <p className="body-copy">
-                106 S. Jones St. <br />
-                Granbury, Texas 76048 <br />
-                Tel: 817-408-3541 <br />
-                Fax: 817-887-4244 <br />
-                daniel@texfamilylawyer.com
-              </p>
-            </div>
           </InfoBox>
         </div>
         <p className="lower-text">

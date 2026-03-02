@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         <ConsultationButtonBox>
-          <p className="location-title">OFFICES IN FORT WORTH AND GRANBURY</p>
+          <p className="location-title">OFFICES IN FORT WORTH</p>
           <Link className="button" href={"/contact-us"}>
             BOOK A CONSULTATION
           </Link>
@@ -196,13 +196,14 @@ const ConsultationButtonBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
   .location-title {
     color: #ffffff;
     font-size: 20px;
     letter-spacing: 6px;
     display: inline-block;
-    margin-right: 3rem;
+    margin-right: 0;
     opacity: 1;
   }
 
@@ -218,7 +219,8 @@ const ConsultationButtonBox = styled.div`
   }
 
   @media (max-width: 1400px) {
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1rem;
     bottom: -100px;
     background-color: #533575;
     .location-title {
