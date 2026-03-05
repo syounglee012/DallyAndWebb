@@ -27,12 +27,11 @@ export default function Footer() {
             <span />
             <p>
               2813 S. Hulen Street, Suite 250
-              <br /> Fort Worth, Texas 76109* <br />
+              <br /> Fort Worth, Texas 76109 <br />
               Tel: 817-409-1136 <br />
               Fax: 817-887-4244 <br />
               lori@texfamilylawyer.com <br />
             </p>
-            <p className="italic">*Principal Office</p>
           </div>
 
           <div className="inside-wrapper">
@@ -59,7 +58,9 @@ export default function Footer() {
           </div>
 
           <div className="inside-wrapper inside-wrapper--memoriam">
-            <p className="footer-title footer-title--small">IN MEMORIAM: DANNY WEBB</p>
+            <p className="footer-title footer-title--small">
+              IN MEMORIAM: DANNY WEBB
+            </p>
             <span />
           </div>
         </Wapper>

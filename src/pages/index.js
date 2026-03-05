@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         <ConsultationButtonBox>
-          <p className="location-title">OFFICES IN FORT WORTH</p>
+          <p className="location-title">OFFICE IN FORT WORTH</p>
           <Link className="button" href={"/contact-us"}>
             BOOK A CONSULTATION
           </Link>
@@ -56,6 +56,7 @@ const ImageContainer = styled.div`
   width: 100%;
   height: 648px;
   position: relative;
+  overflow: hidden;
 
   ::before {
     content: "";
@@ -90,33 +91,28 @@ const ImageContainer = styled.div`
   }
   .main-image {
     width: 100%;
-    max-width: 590px;
+    max-width: 700px;
     height: auto;
   }
 
   @media (max-width: 1400px) {
     height: 560px;
     .main-image {
-      max-width: 400px;
-      margin-top: 7rem;
+      max-width: 500px;
+      margin-top: 4rem;
     }
   }
   @media (max-width: 795px) {
+    height: 700px;
     .wrapper {
       flex-direction: column;
     }
     .main-image {
-      max-width: 350px;
+      max-width: 400px;
       margin-top: 0rem;
     }
     .item:nth-child(2) {
       order: -1;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .wrapper {
-      bottom: 2rem;
     }
   }
 `;
@@ -169,11 +165,11 @@ const MainText = styled.div`
   }
   @media (max-width: 795px) {
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
     .main-top-text {
       font-size: 16px;
       letter-spacing: 4px;
-      line-height: 1.2rem;
+      line-height: 2rem;
     }
     & span {
       max-width: 200px;
@@ -211,6 +207,8 @@ const ConsultationButtonBox = styled.div`
     color: #ffffff;
     border: 1px solid #ffffff;
     padding: 10px 40px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
 
     :hover {
       border: 1px solid #c293ff;
@@ -221,8 +219,7 @@ const ConsultationButtonBox = styled.div`
   @media (max-width: 1400px) {
     justify-content: center;
     gap: 1rem;
-    bottom: -100px;
-    background-color: #533575;
+    bottom: 0;
     .location-title {
       text-align: center;
       font-size: 16px;
@@ -230,24 +227,25 @@ const ConsultationButtonBox = styled.div`
       margin-right: 0;
     }
     .button {
-      font-size: 12px;
-      letter-spacing: 3px;
-      padding: 0.2rem 1rem;
-      margin-bottom: 10px;
+      padding: 10px 40px;
+      font-size: 16px;
+      letter-spacing: 0.1em;
     }
   }
 
   @media (max-width: 795px) {
+    bottom: 0;
     flex-direction: column;
+    gap: 0.2rem;
 
     .location-title {
       font-size: 12px;
       letter-spacing: 2px;
     }
     .button {
-      font-size: 10px;
-      letter-spacing: 2px;
-      padding: 0.1rem 1rem;
+      padding: 10px 40px;
+      font-size: 16px;
+      letter-spacing: 0.1em;
     }
   }
 `;

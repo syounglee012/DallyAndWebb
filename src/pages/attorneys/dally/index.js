@@ -50,19 +50,24 @@ export default function Dally() {
           <span />
           <b>Experience</b>
           <p>
-            Seltzer Dally & Webb, PLLC - Fort Worth, Texas Attorney and
-            Counselor at Law
+            Seltzer Dally & Webb, PLLC - Fort Worth, Texas
+            <br />
+            Attorney and Counselor at Law
             <br />
             <br />
-            Seltzer & Dally, PLLC - Fort Worth, Texas Attorney and Counselor at
-            Law
+            Seltzer & Dally, PLLC - Fort Worth, Texas
+            <br />
+            Attorney and Counselor at Law
             <br />
             <br />
-            Beal Law Firm - Southlake, Texas Senior Associate Attorney
+            Beal Law Firm - Southlake, Texas
+            <br />
+            Senior Associate Attorney
             <br />
             <br />
-            Antonio Olvera, Jr. and Associates - Dallas, Texas Associate
-            Attorney
+            Antonio Olvera, Jr. and Associates - Dallas, Texas
+            <br />
+            Associate Attorney
           </p>
           <span />
           <b>Memberships</b>

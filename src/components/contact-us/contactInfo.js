@@ -118,7 +118,7 @@ const Constainer = styled.div`
 
 const ContactInfo = styled.div`
   width: 100%;
-  max-width: 600px;
+  max-width: 550px;
   padding: 0;
   .office-infos {
     display: inline-block;

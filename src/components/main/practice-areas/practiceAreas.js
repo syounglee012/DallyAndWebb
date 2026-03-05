@@ -82,7 +82,7 @@ const MainWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 8rem;
+  padding: 6rem 8rem 0 8rem;
 
   .title {
     color: #67318d;
@@ -124,8 +124,7 @@ const MainWrapper = styled.div`
     }
   }
   @media (max-width: 1300px) {
-    margin-top: 6rem;
-    padding: 2rem;
+    padding: 4rem 2rem;
     .title {
       font-size: 24px;
     }
