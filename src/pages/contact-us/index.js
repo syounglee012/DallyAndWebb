@@ -28,22 +28,10 @@ export default function ContactUs() {
               <span />
               <p className="body-copy">
                 2813 S. Hulen Street, Suite 250
-                <br /> Fort Worth, Texas 76109* <br />
+                <br /> Fort Worth, Texas 76109 <br />
                 Tel: 817-409-1136 <br />
                 Fax: 817-887-4244 <br />
                 lori@texfamilylawyer.com <br />
-              </p>
-              <p className="italic">*Principal Office</p>
-            </div>
-            <div className="inside-wrapper">
-              <p className="location-title">GRANBURY OFFICE</p>
-              <span />
-              <p className="body-copy">
-                106 S. Jones St. <br />
-                Granbury, Texas 76048 <br />
-                Tel: 817-408-3541 <br />
-                Fax: 817-887-4244 <br />
-                daniel@texfamilylawyer.com
               </p>
             </div>
           </InfoBox>

@@ -6,7 +6,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Form() {
-  const locations = ["Fort Worth", "Granbury"];
   const preferences = [
     "Divorce",
     "Child Support/Custody",
@@ -18,7 +17,6 @@ export default function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [office, setOffice] = useState("");
   const [area, setArea] = useState("");
 
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -62,10 +60,9 @@ export default function Form() {
       name,
       email,
       phone,
-      office,
       area,
     };
-    if (!name || !email || !phone || !office || !area) {
+    if (!name || !email || !phone || !area) {
       return toast.error("Please fill out all fields", {
         position: "top-center",
         style: {
@@ -104,11 +101,7 @@ export default function Form() {
 
   const handleSelect = (e) => {
     setIsSubmitted(false);
-    if (e === "Fort Worth" || e === "Granbury") {
-      setOffice(e);
-    } else {
-      setArea(e);
-    }
+    setArea(e);
   };
 
   return (
@@ -134,14 +127,6 @@ export default function Form() {
         onChange={(e) => setPhone(e.target.value)}
         required
       ></InputField>
-      <DropDownComponent
-        title={"Office Preference*"}
-        menu={locations}
-        handleSelect={handleSelect}
-        isSubmitted={isSubmitted}
-        type="text"
-        required
-      />
       <DropDownComponent
         handleSelect={handleSelect}
         title={"Area of Interest*"}
@@ -190,7 +175,7 @@ const ContactForm = styled.form`
     grid-template-columns: repeat(2, 1fr);
     .six {
       grid-column: 1;
-      grid-row: 4;
+      grid-row: 3;
       max-width: 200px;
     }
     .six {

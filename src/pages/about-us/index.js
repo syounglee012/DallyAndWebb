@@ -59,13 +59,7 @@ export default function AboutUs() {
                 Our Fort Worth office is conveniently located on Hulen Street,
                 free from central downtown traffic.
               </li>
-              <li>
-                Our Granbury office is located right off the historic downtown
-                square in Granbury.
-              </li>
-              <li>
-                Parking is available and complimentary at both of our locations.
-              </li>
+              <li>Parking is available and complimentary.</li>
               <li>Credit cards are accepted.</li>
             </ul>
           </InfoBox>

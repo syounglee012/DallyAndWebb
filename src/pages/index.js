@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         <ConsultationButtonBox>
-          <p className="location-title">OFFICES IN FORT WORTH AND GRANBURY</p>
+          <p className="location-title">OFFICE IN FORT WORTH</p>
           <Link className="button" href={"/contact-us"}>
             BOOK A CONSULTATION
           </Link>
@@ -54,8 +54,9 @@ const Container = styled.div`
 `;
 const ImageContainer = styled.div`
   width: 100%;
-  height: 648px;
+  height: 750px;
   position: relative;
+  overflow: hidden;
 
   ::before {
     content: "";
@@ -86,31 +87,70 @@ const ImageContainer = styled.div`
     bottom: 0;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
+    gap: 1rem;
   }
   .main-image {
     width: 100%;
-    max-width: 590px;
+    max-width: 700px;
     height: auto;
   }
 
   @media (max-width: 1400px) {
-    height: 560px;
+    height: 660px;
     .main-image {
-      max-width: 400px;
-      margin-top: 7rem;
+      max-width: 650px;
+    }
+  }
+  @media (max-width: 1100px) {
+    height: 520px;
+    .main-image {
+      max-width: 520px;
+    }
+  }
+  @media (max-width: 900px) {
+    height: 500px;
+    .main-image {
+      max-width: 480px;
     }
   }
   @media (max-width: 795px) {
+    height: 580px;
     .wrapper {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding-top: 110px;
     }
     .main-image {
-      max-width: 350px;
-      margin-top: 0rem;
+      max-width: 400px;
+      margin-top: 0;
+      margin-bottom: 110px;
     }
     .item:nth-child(2) {
       order: -1;
+    }
+  }
+  @media (max-width: 600px) {
+    height: 680px;
+    .main-image {
+      max-width: 350px;
+    }
+  }
+  @media (max-width: 480px) {
+    height: 500px;
+
+    .wrapper {
+      padding-top: 150px;
+    }
+
+    .main-image {
+      max-width: 270px;
+    }
+    ::after {
+      background: url("/images/main-background.png") no-repeat center center;
+      background-size: cover;
     }
   }
 `;
@@ -119,11 +159,12 @@ const MainText = styled.div`
   width: 100%;
   max-width: 648px;
   margin-bottom: 3rem;
+  align-self: center;
 
   & span {
     display: block;
     width: 100%;
-    max-width: 511px;
+    max-width: 100%;
     border-top: 2px solid #67318d;
     margin: 1rem 0;
   }
@@ -134,7 +175,7 @@ const MainText = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
-    line-height: 30px;
+    line-height: 1.2;
     letter-spacing: 0.25em;
   }
 
@@ -148,34 +189,97 @@ const MainText = styled.div`
   }
 
   @media (max-width: 1400px) {
-    margin-bottom: 0;
     .main-top-text {
-      font-size: 22px;
-      letter-spacing: 6px;
+      font-size: 34px;
+      letter-spacing: 0.2em;
+    }
+    .main-text {
+      font-size: 18px;
     }
     & span {
-      max-width: 300px;
+      margin: 0.6rem 0;
+    }
+  }
+  @media (max-width: 1100px) {
+    margin-bottom: 0;
+    max-width: 460px;
+    align-self: center;
+    padding-bottom: 110px;
+    .main-top-text {
+      font-size: 26px;
+      letter-spacing: 0.15em;
+      line-height: 1.3;
+    }
+    & span {
+      max-width: 100%;
       margin: 0.3rem 0;
     }
     .main-text {
-      font-size: 16px;
+      font-size: 14px;
+      line-height: 1.5rem;
+    }
+  }
+  @media (max-width: 900px) {
+    .main-top-text {
+      font-size: 22px;
+      letter-spacing: 0.1em;
+    }
+    & span {
+      max-width: 100%;
+      margin: 0.3rem 0;
+    }
+    .main-text {
+      font-size: 13px;
+      line-height: 1.3rem;
     }
   }
   @media (max-width: 795px) {
-    padding: 1rem;
+    padding: 0.5rem 1.5rem 0 1.5rem;
+    margin-top: 8rem;
+    max-width: 100%;
+    width: 100%;
+    .main-top-text {
+      font-size: 20px;
+      letter-spacing: 4px;
+      line-height: 1.8rem;
+    }
+    & span {
+      max-width: 100%;
+      margin: 0.2rem 0;
+    }
+    .main-text {
+      font-size: 13px;
+      line-height: 1.3rem;
+    }
+  }
+  @media (max-width: 600px) {
+    margin-top: 6rem;
+    .main-top-text {
+      font-size: 20px;
+      letter-spacing: 4px;
+      line-height: 1.8rem;
+    }
+    & span {
+      max-width: 100%;
+    }
+    .main-text {
+      font-size: 13px;
+      line-height: 1.3rem;
+    }
+  }
+  @media (max-width: 480px) {
     margin-top: 1rem;
     .main-top-text {
       font-size: 16px;
-      letter-spacing: 4px;
-      line-height: 1.2rem;
+      letter-spacing: 3px;
+      line-height: 1.5rem;
     }
     & span {
-      max-width: 200px;
-      margin: 0.1rem 0;
+      max-width: 100%;
     }
     .main-text {
-      font-size: 12px;
-      line-height: 1.2rem;
+      font-size: 11px;
+      line-height: 1.1rem;
     }
   }
 `;
@@ -190,13 +294,14 @@ const ConsultationButtonBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
   .location-title {
     color: #ffffff;
     font-size: 20px;
     letter-spacing: 6px;
     display: inline-block;
-    margin-right: 3rem;
+    margin-right: 0;
     opacity: 1;
   }
 
@@ -204,6 +309,8 @@ const ConsultationButtonBox = styled.div`
     color: #ffffff;
     border: 1px solid #ffffff;
     padding: 10px 40px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
 
     :hover {
       border: 1px solid #c293ff;
@@ -212,9 +319,9 @@ const ConsultationButtonBox = styled.div`
   }
 
   @media (max-width: 1400px) {
-    justify-content: space-evenly;
-    bottom: -100px;
-    background-color: #533575;
+    justify-content: center;
+    gap: 1rem;
+    bottom: 0;
     .location-title {
       text-align: center;
       font-size: 16px;
@@ -222,24 +329,25 @@ const ConsultationButtonBox = styled.div`
       margin-right: 0;
     }
     .button {
-      font-size: 12px;
-      letter-spacing: 3px;
-      padding: 0.2rem 1rem;
-      margin-bottom: 10px;
+      padding: 10px 40px;
+      font-size: 16px;
+      letter-spacing: 0.1em;
     }
   }
 
   @media (max-width: 795px) {
+    bottom: 0;
     flex-direction: column;
+    gap: 0.2rem;
 
     .location-title {
       font-size: 12px;
       letter-spacing: 2px;
     }
     .button {
-      font-size: 10px;
-      letter-spacing: 2px;
-      padding: 0.1rem 1rem;
+      padding: 10px 40px;
+      font-size: 16px;
+      letter-spacing: 0.1em;
     }
   }
 `;

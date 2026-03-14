@@ -27,26 +27,13 @@ export default function Footer() {
             <span />
             <p>
               2813 S. Hulen Street, Suite 250
-              <br /> Fort Worth, Texas 76109* <br />
+              <br /> Fort Worth, Texas 76109 <br />
               Tel: 817-409-1136 <br />
               Fax: 817-887-4244 <br />
               lori@texfamilylawyer.com <br />
             </p>
-            <p className="italic">*Principal Office</p>
           </div>
-          <div className="inside-wrapper">
-            <Link href="/contact-us">
-              <p className="footer-title">GRANBURY OFFICE</p>
-            </Link>
-            <span />
-            <p>
-              106 S. Jones St. <br />
-              Granbury, Texas 76048 <br />
-              Tel: 817-408-3541 <br />
-              Fax: 817-887-4244 <br />
-              daniel@texfamilylawyer.com
-            </p>
-          </div>
+
           <div className="inside-wrapper">
             <Link href="/attorneys">
               <p className="footer-title">ATTORNEYS</p>
@@ -69,9 +56,16 @@ export default function Footer() {
               })}
             </ul>
           </div>
+
+          <div className="inside-wrapper inside-wrapper--memoriam">
+            <p className="footer-title footer-title--small">
+              IN MEMORIAM: DANNY WEBB
+            </p>
+            <span />
+          </div>
         </Wapper>
         <p className="rights">
-          &#169; 2023 Dally & Webb Family Law, PLLC. All rights reserved. Legal.
+          &#169; 2026 Dally & Webb Family Law, PLLC. All rights reserved. Legal.
         </p>
       </div>
     </FooterContainer>
@@ -117,6 +111,14 @@ const Wapper = styled.div`
     width: 100%;
     max-width: 220px;
   }
+  .inside-wrapper--memoriam {
+    width: max-content;
+    max-width: 100%;
+  }
+  .inside-wrapper--memoriam span {
+    max-width: none;
+    width: 100%;
+  }
   & span {
     display: block;
     width: 100%;
@@ -136,6 +138,9 @@ const Wapper = styled.div`
     transition: 0.3s ease-in-out;
     :hover {
       color: #c293ff;
+    }
+    &.footer-title--small {
+      white-space: nowrap;
     }
   }
 
