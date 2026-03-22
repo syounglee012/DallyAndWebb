@@ -58,9 +58,11 @@ export default function Footer() {
           </div>
 
           <div className="inside-wrapper inside-wrapper--memoriam">
-            <p className="footer-title footer-title--small">
-              IN MEMORIAM: DANNY WEBB
-            </p>
+            <Link href="/memoriam">
+              <p className="footer-title footer-title--small">
+                IN MEMORIAM: DANNY WEBB
+              </p>
+            </Link>
             <span />
           </div>
         </Wapper>
