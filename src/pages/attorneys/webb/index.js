@@ -18,7 +18,7 @@ export default function Webb() {
             bigger.
             <br />
             <br />
-            Danny didn't plan on practicing family law -- it was actually the
+            Danny didn&apos;t plan on practicing family law -- it was actually the
             one area he intended to avoid. But life had other plans. He
             discovered a rare talent for it, and a deep sense of purpose in
             guiding families through some of the most difficult passages of
