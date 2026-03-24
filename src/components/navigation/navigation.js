@@ -37,19 +37,13 @@ export default function Navigation() {
         </Link>
       </ul>
       <button className="phoneLogo">
-        <Link href={"tel:+1-817-409-1136"}>
+        <Link href={"tel:+1-817-409-1136"} className="phoneLink">
           <Image
             src={phone}
             alt="phone icon"
             width={15}
             height={15}
-            style={{
-              width: "auto",
-              height: "auto",
-              position: "relative",
-              top: "3px",
-              marginRight: "1rem",
-            }}
+            className="phoneIcon"
           />
           817-409-1136
         </Link>
@@ -114,6 +108,22 @@ const Nav = styled.nav`
     :hover {
       background-color: #c293ff;
     }
+  }
+
+  .phoneLink {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: #ffffff;
+  }
+
+  .phoneIcon {
+    width: auto;
+    height: auto;
+    display: block;
   }
 
   .ham-wrapper {

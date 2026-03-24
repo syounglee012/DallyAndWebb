@@ -2,17 +2,26 @@ import Image from "next/image";
 import styled from "styled-components";
 
 export default function attorneyBanner(props) {
+  const memoriam = Boolean(props.memoriam);
+  const memoriamSubline =
+    props.memoriamSubline ?? "DANIEL P. WEBB • 1980 - 2026";
+
   return (
     <Container
       maxWidth={props.maxWidth}
       top={props.top}
       mobileTop={props.mobileTop}
       right={props.right}
+      $memoriam={memoriam}
     >
-      <Title>
-        <p className="header-white-large">{props.name}</p>
+      <Title $memoriam={memoriam}>
+        <p className="header-white-large">
+          {memoriam ? "IN MEMORIAM" : props.name}
+        </p>
         <p className="practice-area">
-          {props.title || "ATTORNEY & COUNSELOR AT LAW"}
+          {memoriam
+            ? memoriamSubline
+            : props.title || "ATTORNEY & COUNSELOR AT LAW"}
         </p>
       </Title>
       {props.src && (
@@ -24,18 +33,20 @@ export default function attorneyBanner(props) {
         />
       )}
 
-      <Contact>
-        <div className="contact-wrapper">
-          <p className="contact-info">817-409-1136</p>
-          <p className="contact-info">{props.email}</p>
-        </div>
+      <Contact $memoriam={memoriam}>
+        {!memoriam && (
+          <div className="contact-wrapper">
+            <p className="contact-info">817-409-1136</p>
+            <p className="contact-info">{props.email}</p>
+          </div>
+        )}
       </Contact>
     </Container>
   );
 }
 const Container = styled.div`
   width: 100%;
-  height: 400px;
+  height: ${(props) => (props.$memoriam ? "300px" : "400px")};
   position: relative;
   background-color: #272d47;
 
@@ -50,7 +61,7 @@ const Container = styled.div`
   }
 
   @media (max-width: 1300px) {
-    height: 200px;
+    height: ${(props) => (props.$memoriam ? "180px" : "200px")};
     .attorney-banner-img {
       display: none;
     }
@@ -77,6 +88,15 @@ const Title = styled.div`
     letter-spacing: 0.15em;
     margin-top: 1rem;
   }
+
+  ${(p) =>
+    p.$memoriam &&
+    `
+    .practice-area {
+      letter-spacing: 0.12em;
+    }
+  `}
+
   @media (max-width: 1510px) {
     .header-white-large {
       font-size: 32px;
@@ -120,7 +140,8 @@ const Title = styled.div`
 const Contact = styled.div`
   width: 100%;
   background-color: rgba(83, 53, 117, 0.7);
-  padding: 1rem 0;
+  padding: ${(p) => (p.$memoriam ? "1.25rem 0" : "1rem 0")};
+  min-height: ${(p) => (p.$memoriam ? "3.5rem" : "auto")};
   position: absolute;
   bottom: 0;
   display: flex;
@@ -139,7 +160,8 @@ const Contact = styled.div`
   }
 
   @media (max-width: 1300px) {
-    padding: 0.5rem 1rem;
+    padding: ${(p) => (p.$memoriam ? "0.75rem 1rem" : "0.5rem 1rem")};
+    min-height: ${(p) => (p.$memoriam ? "2.75rem" : "auto")};
     justify-content: flex-start;
 
     .contact-wrapper {
