@@ -71,8 +71,7 @@ export default function Vargas() {
             <br />
             Texas Bar College, 2022 - present
           </p>
-          <br />
-          <br />
+          <span />
           <b>Awards</b>
           <p>
             2022 Top Attorney, Fort Worth Magazine
@@ -81,8 +80,7 @@ export default function Vargas() {
             <br />
             2023 Inaugural L. Clifford Davis Legal Association Young Trailblazer
           </p>
-          <br />
-          <br />
+          <span />
           <b>Community Involvement</b>
           <p>
             Board member of Tarrant County Young Lawyers Association,
