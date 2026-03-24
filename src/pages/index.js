@@ -13,8 +13,9 @@ export default function Home() {
           <Image
             src={mainPic}
             alt="main content area image"
-            quality={100}
-            loading="eager"
+            priority
+            quality={75}
+            sizes="(max-width: 480px) 270px, (max-width: 600px) 350px, (max-width: 795px) 400px, (max-width: 900px) 480px, (max-width: 1100px) 520px, (max-width: 1400px) 650px, 700px"
             className="main-image item"
           />
           <MainText className="item">
@@ -75,7 +76,7 @@ const ImageContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/images/main-background.png") no-repeat;
+    background: url("/images/main-background.jpg") no-repeat;
     object-fit: contain;
     background-size: 100% 100%;
     z-index: -2;
@@ -149,7 +150,7 @@ const ImageContainer = styled.div`
       max-width: 270px;
     }
     ::after {
-      background: url("/images/main-background.png") no-repeat center center;
+      background: url("/images/main-background-mobile.jpg") no-repeat center center;
       background-size: cover;
     }
   }

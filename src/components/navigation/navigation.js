@@ -23,26 +23,34 @@ export default function Navigation() {
         onClick={() => router.push("/")}
       />
       <ul className="nav-menu">
-        <Link href={"/attorneys"} className="link">
-          <li>ATTORNEYS</li>
-        </Link>
-        <Link href={"/practice-areas"} className="link">
-          <li>PRACTICE AREAS</li>
-        </Link>
-        <Link href={"/about-us"} className="link">
-          <li>ABOUT US</li>
-        </Link>
-        <Link href={"/contact-us"} className="link">
-          <li>CONTACT US</li>
-        </Link>
+        <li>
+          <Link href={"/attorneys"} className="link">
+            ATTORNEYS
+          </Link>
+        </li>
+        <li>
+          <Link href={"/practice-areas"} className="link">
+            PRACTICE AREAS
+          </Link>
+        </li>
+        <li>
+          <Link href={"/about-us"} className="link">
+            ABOUT US
+          </Link>
+        </li>
+        <li>
+          <Link href={"/contact-us"} className="link">
+            CONTACT US
+          </Link>
+        </li>
       </ul>
       <button className="phoneLogo">
         <Link href={"tel:+1-817-409-1136"} className="phoneLink">
           <Image
             src={phone}
             alt="phone icon"
-            width={15}
-            height={15}
+            width={17}
+            height={22}
             className="phoneIcon"
           />
           817-409-1136
@@ -67,25 +75,29 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     & li {
       display: inline-block;
-      padding: 11px 40px;
-      font-style: normal;
-      font-size: 16px;
-      letter-spacing: 1px;
-      transition: 0.5s ease;
-
-      :hover {
-        color: #ffffff;
-        background-color: #67318d;
-        font-weight: 500;
-      }
     }
   }
 
   .link {
     color: black;
     width: fit-content;
+    display: inline-block;
+    padding: 11px 40px;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.5s ease;
+    text-decoration: none;
+    :hover {
+      color: #ffffff;
+      background-color: #67318d;
+      font-weight: 500;
+    }
   }
 
   .phoneLogo {

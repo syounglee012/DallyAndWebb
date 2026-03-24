@@ -41,7 +41,7 @@ export default function PracticeAreas() {
             cannot be reached.
           </p>
           <Link className="button" href="/practice-areas/uncontested-divorce">
-            LEARN MORE
+            LEARN MORE ABOUT DIVORCE
           </Link>
         </div>
         <div>
@@ -55,7 +55,7 @@ export default function PracticeAreas() {
             their children.
           </p>
           <Link className="button" href="/practice-areas/child-custody">
-            LEARN MORE
+            LEARN MORE ABOUT CHILD CUSTODY
           </Link>
         </div>
         <div>
@@ -70,7 +70,7 @@ export default function PracticeAreas() {
             since the entry of your prior order.
           </p>
           <Link className="button" href="/practice-areas/modification">
-            LEARN MORE
+            LEARN MORE ABOUT MODIFICATION
           </Link>
         </div>
       </ImageWapper>

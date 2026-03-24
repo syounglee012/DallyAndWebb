@@ -3,6 +3,7 @@ import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/footer/footer";
 import styled from "styled-components";
 import { useRouter } from "next/router";
+import { Montserrat } from "next/font/google";
 import "../styles/globals.css";
 import ContactInfos from "@/components/contact-us/contactInfo";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
@@ -12,6 +13,13 @@ const SITE_NAME = "Dally & Webb Family Law, PLLC";
 const DEFAULT_TITLE = "Fort Worth Family Law Attorneys | Dally & Webb";
 const DEFAULT_DESCRIPTION =
   "Dally & Webb Family Law, PLLC serves Fort Worth families with experienced representation in divorce, child custody, child support, mediation, and related family law matters.";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 const SEO_BY_PATH = {
   "/": {
@@ -65,8 +73,8 @@ export default function App({ Component, pageProps }) {
       <GoogleReCaptchaProvider
         reCaptchaKey={siteKey}
         scriptProps={{
-          async: false,
-          defer: false,
+          async: true,
+          defer: true,
           appendTo: "head",
           nonce: undefined,
         }}
@@ -90,13 +98,13 @@ export default function App({ Component, pageProps }) {
           {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
           <link rel="icon" href="/dw.svg" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         </Head>
 
-        <Container>
+        <Container className={montserrat.className}>
           <Navigation />
-          <Component {...pageProps} />
+          <main>
+            <Component {...pageProps} />
+          </main>
           <ContactInfos />
           <Footer />
         </Container>

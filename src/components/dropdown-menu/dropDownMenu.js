@@ -36,7 +36,19 @@ export default function DropDownComponent({
 
   return (
     <DropDown ref={closeRef} size={size} padding={padding}>
-      <div className="drop-down__header" onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className="drop-down__header"
+        onClick={() => setIsOpen(!isOpen)}
+        role="button"
+        tabIndex={0}
+        aria-expanded={isOpen}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setIsOpen(!isOpen);
+          }
+        }}
+      >
         <div
           className={`drop-down__header__title ${
             isOpen ? "open" : isClicked && !isSubmitted ? "clicked" : ""
@@ -116,11 +128,11 @@ const DropDown = styled.div`
       font-weight: 400;
       font-size: 14px;
       line-height: 30px;
-      color: #808080;
+      color: #5f5f5f;
     }
     &.open {
       & p {
-        color: #c293ff;
+        color: #67318d;
       }
     }
     &.clicked {
@@ -151,6 +163,9 @@ const DropDown = styled.div`
     pointer-events: none;
     transition: transform 0.5s ease-in-out, opacity 0.5s;
     box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
     &.open {
       pointer-events: all;
@@ -165,6 +180,7 @@ const DropDown = styled.div`
     color: #808080;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    list-style: none;
 
     :hover {
       color: #c293ff;
