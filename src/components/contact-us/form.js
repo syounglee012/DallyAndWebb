@@ -211,7 +211,8 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 0.75rem;
 
   .six {
     color: #ffffff;
@@ -222,7 +223,7 @@ const ContactForm = styled.form`
     font-weight: 500;
     padding: 10px 40px;
     letter-spacing: 0.25em;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     cursor: pointer;
     :hover {
       border: 1px solid #c293ff;

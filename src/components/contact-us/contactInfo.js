@@ -13,35 +13,38 @@ export default function ContactInfos() {
         <div className="wrapper">
           <Form />
           <ContactInfo>
-            <div style={{ width: "100%" }}>
-              <Image
-                src={PhoneIcon}
-                alt="Phone icon"
-                width={15}
-                height={15}
-                style={{
-                  width: "auto",
-                  height: "auto",
-                  marginRight: "2rem",
-                  display: "inline-block",
-                }}
-              />
-              <p className="office-infos">FORT WORTH - 817-409-1136</p>
-              <br />
+            <div className="office-contact-lines">
+              <div className="office-row">
+                <Image
+                  src={PhoneIcon}
+                  alt="Phone icon"
+                  width={15}
+                  height={15}
+                  className="office-icon"
+                />
+                <p className="office-infos">
+                  FORT WORTH -{" "}
+                  <a className="office-link" href="tel:8174091136">
+                    817-409-1136
+                  </a>
+                </p>
+              </div>
 
-              <Image
-                src={EmailIcon}
-                alt="Email icon"
-                width={23}
-                height={23}
-                style={{
-                  height: "auto",
-                  width: "auto",
-                  marginRight: "1.5rem",
-                  display: "inline-block",
-                }}
-              />
-              <p className="office-infos">LORI@TEXFAMILYLAWYER.COM</p>
+              <div className="office-row">
+                <Image
+                  src={EmailIcon}
+                  alt="Email icon"
+                  width={23}
+                  height={23}
+                  className="office-icon"
+                />
+                <a
+                  className="office-infos office-link"
+                  href="mailto:lori@texfamilylawyer.com"
+                >
+                  LORI@TEXFAMILYLAWYER.COM
+                </a>
+              </div>
             </div>
 
             <p>
@@ -120,13 +123,35 @@ const ContactInfo = styled.div`
   width: 100%;
   max-width: 550px;
   padding: 0;
+  .office-contact-lines {
+    width: 100%;
+  }
+  .office-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .office-icon {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+  }
   .office-infos {
     display: inline-block;
     color: #ffffff;
     font-size: 20px;
     letter-spacing: 4px;
-    margin: 0.5rem 0 1rem 0;
+    margin: 0;
     vertical-align: middle;
+  }
+  .office-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    :hover {
+      color: #c293ff;
+    }
   }
   & p {
     margin-top: 2rem;
@@ -134,6 +159,10 @@ const ContactInfo = styled.div`
   @media (max-width: 1300px) {
     margin-top: 1rem;
     max-width: 100%;
+    .office-row {
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
     .office-infos {
       margin: 0;
       font-size: 12px;
