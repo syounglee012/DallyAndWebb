@@ -49,16 +49,18 @@ export default function Footer() {
             <ul>
               {attorneys.map((attorney, idx) => {
                 return (
-                  <Link
-                    href={`/attorneys/${
-                      attorney.substring(0, 1) == "j"
-                        ? attorney.split(", ")[0].split(" ").pop()
-                        : attorney.split(" ").pop()
-                    }`}
-                    key={attorney + idx}
-                  >
-                    <p className="attorney-name">{attorney.toUpperCase()}</p>
-                  </Link>
+                  <li key={attorney + idx}>
+                    <Link
+                      href={`/attorneys/${
+                        attorney.substring(0, 1) == "j"
+                          ? attorney.split(", ")[0].split(" ").pop()
+                          : attorney.split(" ").pop()
+                      }`}
+                      className="attorney-name"
+                    >
+                      {attorney.toUpperCase()}
+                    </Link>
+                  </li>
                 );
               })}
             </ul>
@@ -166,6 +168,9 @@ const Wapper = styled.div`
   }
 
   .attorney-name {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
     transition: 0.3s ease-in-out;
     :hover {
       color: #c293ff;
@@ -177,6 +182,8 @@ const Wapper = styled.div`
   }
   & ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     & li {
       color: #ffffff;
       font-size: 14px;

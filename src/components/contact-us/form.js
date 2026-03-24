@@ -19,11 +19,13 @@ export default function Form() {
   const [phone, setPhone] = useState("");
   const [area, setArea] = useState("");
   const [website, setWebsite] = useState("");
+  const [isVerifying, setIsVerifying] = useState(false);
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
+    if (isVerifying) return;
     // return toast.error(
     //   `We apologize for the inconvenience. Our contact form is temporarily unavailable.\n\nPlease call us at 817-409-1136 or email LORI@TEXFAMILYLAWYER.COM for immediate assistance. \n\n Thank you for your patience.`,
     //   {
@@ -46,9 +48,10 @@ export default function Form() {
       return;
     }
 
+    setIsVerifying(true);
     try {
       const token = await executeRecaptcha("handleSubmit");
-      handleSubmit(token);
+      await handleSubmit(token);
     } catch (error) {
       toast.error("Could not verify reCAPTCHA. Please try again.", {
         position: "top-center",
@@ -57,6 +60,9 @@ export default function Form() {
           fontFamily: "Montserrat",
         },
       });
+      return;
+    } finally {
+      setIsVerifying(false);
     }
   };
 
@@ -161,6 +167,7 @@ export default function Form() {
       <InputField
         placeholder="Name*"
         type="text"
+        aria-label="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
         required
@@ -168,6 +175,7 @@ export default function Form() {
       <InputField
         placeholder="Email Address*"
         type="email"
+        aria-label="Email Address"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
@@ -175,6 +183,7 @@ export default function Form() {
       <InputField
         type="text"
         placeholder="Phone Number*"
+        aria-label="Phone Number"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         required
@@ -197,8 +206,8 @@ export default function Form() {
         type="text"
         required
       />
-      <button className="six" type="submit" disabled={!executeRecaptcha}>
-        SUBMIT INFO
+      <button className="six" type="submit" disabled={isVerifying}>
+        {isVerifying ? "VERIFYING..." : "SUBMIT INFO"}
       </button>{" "}
       <ToastContainer />
     </ContactForm>

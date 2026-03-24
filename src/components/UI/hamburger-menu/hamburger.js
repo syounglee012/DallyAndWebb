@@ -47,8 +47,8 @@ export default function Hamburger() {
         type="checkbox"
         className={"check"}
         checked={isOpen}
-        onClick={() => handleClick()}
-        onChange={() => handleClick()}
+        onChange={handleClick}
+        aria-label="Toggle navigation menu"
       />
       <div className="ham-menu">
         <span className="line line1"></span>
@@ -56,21 +56,21 @@ export default function Hamburger() {
         <span className="line line3"></span>
       </div>
       <ul className={`menu-items`}>
-        <Link href={"/"}>
-          <li onClick={() => handleClick()}>HOME</li>
-        </Link>
-        <Link href={"/attorneys"}>
-          <li onClick={() => handleClick()}>ATTORNEYS</li>
-        </Link>
-        <Link href={"/practice-areas"}>
-          <li onClick={() => handleClick()}>PRACTICE AREAS</li>
-        </Link>
-        <Link href={"/about-us"}>
-          <li onClick={() => handleClick()}>ABOUT US</li>
-        </Link>
-        <Link href={"/contact-us"}>
-          <li onClick={() => handleClick()}>CONTACT US</li>
-        </Link>
+        <li onClick={() => handleClick()}>
+          <Link href={"/"}>HOME</Link>
+        </li>
+        <li onClick={() => handleClick()}>
+          <Link href={"/attorneys"}>ATTORNEYS</Link>
+        </li>
+        <li onClick={() => handleClick()}>
+          <Link href={"/practice-areas"}>PRACTICE AREAS</Link>
+        </li>
+        <li onClick={() => handleClick()}>
+          <Link href={"/about-us"}>ABOUT US</Link>
+        </li>
+        <li onClick={() => handleClick()}>
+          <Link href={"/contact-us"}>CONTACT US</Link>
+        </li>
       </ul>
     </Container>
   );
@@ -118,16 +118,20 @@ const Container = styled.div`
   }
 
   .menu-items li {
-    color: black;
     padding: 0.5rem;
     cursor: pointer;
   }
 
-  .menu-items li :hover {
+  .menu-items li a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .menu-items li a:hover {
     color: rgb(174, 174, 174);
   }
 
-  .menu-items li :active {
+  .menu-items li a:active {
     color: rgb(174, 174, 174);
   }
 

@@ -6,6 +6,29 @@ import { useRouter } from "next/router";
 export default function PracticeAreaList() {
   const [activeLink, setActiveLink] = useState(null);
   const router = useRouter();
+  const practiceAreas = [
+    { label: "UNCONTESTED DIVORCE", href: "/practice-areas/uncontested-divorce" },
+    { label: "CONTESTED DIVORCE", href: "/practice-areas/contested-divorce" },
+    { label: "COLLABORATIVE DIVORCE", href: "/practice-areas/collaborative-divorce" },
+    { label: "SAME-SEX DIVORCE", href: "/practice-areas/same-sex-divorce" },
+    { label: "MILITARY DIVORCE", href: "/practice-areas/military-divorce" },
+    { label: "CHILD CUSTODY", href: "/practice-areas/child-custody" },
+    { label: "CHILD SUPPORT", href: "/practice-areas/child-support" },
+    { label: "MODIFYING CUSTODY OR CHILD SUPPORT", href: "/practice-areas/modification" },
+    { label: "GRANDPARENT RIGHTS", href: "/practice-areas/grandparent-rights" },
+    { label: "PATERNITY", href: "/practice-areas/paternity" },
+    { label: "ADOPTION", href: "/practice-areas/adoption" },
+    { label: "PROTECTIVE ORDERS", href: "/practice-areas/protective-orders" },
+    { label: "MEDIATION", href: "/practice-areas/mediation" },
+    {
+      label: "CHILD PROTECTIVE SERVICES (CPS)",
+      href: "/practice-areas/child-protective-services",
+    },
+    {
+      label: "TERMINATION OF PARENTAL RIGHTS",
+      href: "/practice-areas/termination-of-parental-rights",
+    },
+  ];
 
   useEffect(() => {
     const path = router.pathname;
@@ -24,151 +47,11 @@ export default function PracticeAreaList() {
     <Container>
       <span />
       <ul>
-        <Link href="/practice-areas/uncontested-divorce">
-          <li
-            className={
-              activeLink === "/practice-areas/uncontested-divorce"
-                ? "active"
-                : ""
-            }
-          >
-            UNCONTESTED DIVORCE
+        {practiceAreas.map((item) => (
+          <li className={activeLink === item.href ? "active" : ""} key={item.href}>
+            <Link href={item.href}>{item.label}</Link>
           </li>
-        </Link>
-        <Link href="/practice-areas/contested-divorce">
-          <li
-            className={
-              activeLink === "/practice-areas/contested-divorce" ? "active" : ""
-            }
-          >
-            CONTESTED DIVORCE
-          </li>
-        </Link>
-        <Link href="/practice-areas/collaborative-divorce">
-          <li
-            className={
-              activeLink === "/practice-areas/collaborative-divorce"
-                ? "active"
-                : ""
-            }
-          >
-            COLLABORATIVE DIVORCE
-          </li>
-        </Link>
-        <Link href="/practice-areas/same-sex-divorce">
-          <li
-            className={
-              activeLink === "/practice-areas/same-sex-divorce" ? "active" : ""
-            }
-          >
-            SAME-SEX DIVORCE
-          </li>
-        </Link>
-        <Link href="/practice-areas/military-divorce">
-          <li
-            className={
-              activeLink === "/practice-areas/military-divorce" ? "active" : ""
-            }
-          >
-            MILITARY DIVORCE
-          </li>
-        </Link>
-        <Link href="/practice-areas/child-custody">
-          <li
-            className={
-              activeLink === "/practice-areas/child-custody" ? "active" : ""
-            }
-          >
-            CHILD CUSTODY
-          </li>
-        </Link>
-        <Link href="/practice-areas/child-support">
-          <li
-            className={
-              activeLink === "/practice-areas/child-support" ? "active" : ""
-            }
-          >
-            CHILD SUPPORT
-          </li>
-        </Link>
-        <Link href="/practice-areas/modification">
-          <li
-            className={
-              activeLink === "/practice-areas/modification" ? "active" : ""
-            }
-          >
-            MODIFYING CUSTODY OR CHILD SUPPORT
-          </li>
-        </Link>
-        <Link href="/practice-areas/grandparent-rights">
-          <li
-            className={
-              activeLink === "/practice-areas/grandparent-rights"
-                ? "active"
-                : ""
-            }
-          >
-            GRANDPARENT RIGHTS
-          </li>
-        </Link>
-        <Link href="/practice-areas/paternity">
-          <li
-            className={
-              activeLink === "/practice-areas/paternity" ? "active" : ""
-            }
-          >
-            PATERNITY
-          </li>
-        </Link>
-        <Link href="/practice-areas/adoption">
-          <li
-            className={
-              activeLink === "/practice-areas/adoption" ? "active" : ""
-            }
-          >
-            ADOPTION
-          </li>
-        </Link>
-        <Link href="/practice-areas/protective-orders">
-          <li
-            className={
-              activeLink === "/practice-areas/protective-orders" ? "active" : ""
-            }
-          >
-            PROTECTIVE ORDERS
-          </li>
-        </Link>
-        <Link href="/practice-areas/mediation">
-          <li
-            className={
-              activeLink === "/practice-areas/mediation" ? "active" : ""
-            }
-          >
-            MEDIATION
-          </li>
-        </Link>
-        <Link href="/practice-areas/child-protective-services">
-          <li
-            className={
-              activeLink === "/practice-areas/child-protective-services"
-                ? "active"
-                : ""
-            }
-          >
-            CHILD PROTECTIVE SERVICES (CPS)
-          </li>
-        </Link>
-        <Link href="/practice-areas/termination-of-parental-rights">
-          <li
-            className={
-              activeLink === "/practice-areas/termination-of-parental-rights"
-                ? "active"
-                : ""
-            }
-          >
-            TERMINATION OF PARENTAL RIGHTS
-          </li>
-        </Link>
+        ))}
       </ul>
     </Container>
   );
@@ -200,6 +83,10 @@ const Container = styled.div`
     cursor: pointer;
     :hover {
       color: #67318d;
+    }
+    & a {
+      color: inherit;
+      text-decoration: none;
     }
   }
   .active {

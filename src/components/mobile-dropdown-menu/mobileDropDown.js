@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function MobileDropDown(props) {
@@ -10,10 +9,11 @@ export default function MobileDropDown(props) {
   const [selectedItem, setSelectedItem] = useState("");
   const router = useRouter();
 
-  const handleClick = (e) => {
+  const handleClick = (e, slug) => {
     setSelectedItem(e);
     setIsClicked(true);
     setIsOpen(false);
+    router.push(slug);
   };
 
   useEffect(() => {
@@ -97,7 +97,19 @@ export default function MobileDropDown(props) {
   ];
   return (
     <DropDown ref={closeRef} size={props?.size} padding={props?.padding}>
-      <div className="drop-down__header" onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className="drop-down__header"
+        onClick={() => setIsOpen(!isOpen)}
+        role="button"
+        tabIndex={0}
+        aria-expanded={isOpen}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setIsOpen(!isOpen);
+          }
+        }}
+      >
         <div
           className={`drop-down__header__title ${
             isOpen ? "open" : isClicked ? "clicked" : ""
@@ -114,15 +126,17 @@ export default function MobileDropDown(props) {
       <ul className={`drop-down__body ${isOpen ? "open" : ""}`}>
         {practiceAreas.map((item, index) => {
           return (
-            <Link href={item.slug} key={index}>
-              <li
-                className="drop-down__body__item"
-                key={index}
-                onClick={() => handleClick(item.area)}
+            <li
+              className="drop-down__body__item"
+              key={index}
+            >
+              <button
+                type="button"
+                onClick={() => handleClick(item.area, item.slug)}
               >
                 {item.area}
-              </li>
-            </Link>
+              </button>
+            </li>
           );
         })}
       </ul>
@@ -175,11 +189,11 @@ const DropDown = styled.div`
       font-weight: 400;
       font-size: 19px;
       line-height: 30px;
-      color: #808080;
+      color: #5f5f5f;
     }
     &.open {
       & p {
-        color: #c293ff;
+        color: #67318d;
       }
     }
     &.clicked {
@@ -224,6 +238,18 @@ const DropDown = styled.div`
     color: #808080;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    & button {
+      width: 100%;
+      text-align: left;
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      text-decoration: none;
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+    }
 
     :hover {
       color: #c293ff;
