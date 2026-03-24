@@ -18,8 +18,11 @@ export default function ContactUs() {
           <InfoBox>
             <div>
               <p className="contact-info">
-                To schedule a consultation, call 817-409-1136 or contact us
-                online through the form below.
+                To schedule a consultation, call{" "}
+                <a className="contact-link" href="tel:8174091136">
+                  817-409-1136
+                </a>{" "}
+                or contact us online through the form below.
               </p>
             </div>
 
@@ -29,9 +32,16 @@ export default function ContactUs() {
               <p className="body-copy">
                 2813 S. Hulen Street, Suite 250
                 <br /> Fort Worth, Texas 76109 <br />
-                Tel: 817-409-1136 <br />
+                Tel:{" "}
+                <a className="contact-link" href="tel:8174091136">
+                  817-409-1136
+                </a>{" "}
+                <br />
                 Fax: 817-887-4244 <br />
-                lori@texfamilylawyer.com <br />
+                <a className="contact-link" href="mailto:lori@texfamilylawyer.com">
+                  lori@texfamilylawyer.com
+                </a>{" "}
+                <br />
               </p>
             </div>
           </InfoBox>
@@ -67,6 +77,8 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
   }
   .lower-text {
     width: 100%;
@@ -116,6 +128,14 @@ const InfoBox = styled.div`
     letter-spacing: 0.15em;
     color: #272d47;
     margin-top: 1.5rem;
+  }
+  .contact-link {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    :hover {
+      color: #c293ff;
+    }
   }
 
   .italic {
