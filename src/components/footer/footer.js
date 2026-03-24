@@ -28,9 +28,16 @@ export default function Footer() {
             <p>
               2813 S. Hulen Street, Suite 250
               <br /> Fort Worth, Texas 76109 <br />
-              Tel: 817-409-1136 <br />
+              Tel:{" "}
+              <a className="contact-link" href="tel:8174091136">
+                817-409-1136
+              </a>{" "}
+              <br />
               Fax: 817-887-4244 <br />
-              lori@texfamilylawyer.com <br />
+              <a className="contact-link" href="mailto:lori@texfamilylawyer.com">
+                lori@texfamilylawyer.com
+              </a>{" "}
+              <br />
             </p>
           </div>
 
@@ -143,6 +150,25 @@ const Wapper = styled.div`
     }
     &.footer-title--small {
       white-space: nowrap;
+    }
+  }
+
+  .contact-link {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    :hover {
+      color: #c293ff;
+    }
+  }
+
+  .attorney-name {
+    transition: 0.3s ease-in-out;
+    :hover {
+      color: #c293ff;
     }
   }
 
