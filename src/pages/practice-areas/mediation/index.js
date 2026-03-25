@@ -19,7 +19,7 @@ export default function Mediation() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">MEDIATION</p>
+            <h1 className="body-copy-bold">MEDIATION</h1>
             <p className="body-copy">
               Either on written agreement between the parties or by order of the
               Court, the parties may attend mediation. Almost all Courts require
@@ -64,6 +64,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

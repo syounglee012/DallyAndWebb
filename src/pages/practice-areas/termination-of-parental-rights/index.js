@@ -19,7 +19,7 @@ export default function TerminationOfParentalRights() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">TERMINATION OF PARENTAL RIGHTS</p>
+            <h1 className="body-copy-bold">TERMINATION OF PARENTAL RIGHTS</h1>
             <p className="body-copy">
               When this process is voluntary, it is often referred to as
               &#34;relinquishment.&#34; A court can also order termination of
@@ -51,6 +51,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

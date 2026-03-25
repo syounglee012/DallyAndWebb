@@ -19,7 +19,7 @@ export default function CPS() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">CHILD PROTECTIVE SERVICES (CPS)</p>
+            <h1 className="body-copy-bold">CHILD PROTECTIVE SERVICES (CPS)</h1>
             <p className="body-copy">
               The Department of Family and Protective Services, commonly known
               as DFPS, is an administrative agency. Child Protective Services
@@ -70,6 +70,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

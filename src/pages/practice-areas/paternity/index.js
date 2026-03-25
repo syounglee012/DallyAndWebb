@@ -19,7 +19,7 @@ export default function Paternity() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">PATERNITY</p>
+            <h1 className="body-copy-bold">PATERNITY</h1>
             <p className="body-copy">
               If you have never been declared the legal father of your child,
               either by being married to the mother, been named the legal father
@@ -57,6 +57,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

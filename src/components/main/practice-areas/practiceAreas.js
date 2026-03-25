@@ -40,7 +40,7 @@ export default function PracticeAreas() {
             parties, or asking the Court to make a decision when an agreement
             cannot be reached.
           </p>
-          <Link className="button" href="/practice-areas/uncontested-divorce">
+          <Link className="button" href="/practice-areas/uncontested-divorce" aria-label="Learn more about divorce">
             LEARN MORE
           </Link>
         </div>
@@ -54,7 +54,7 @@ export default function PracticeAreas() {
             This means all separated parents share equal rights and duties to
             their children.
           </p>
-          <Link className="button" href="/practice-areas/child-custody">
+          <Link className="button" href="/practice-areas/child-custody" aria-label="Learn more about child custody">
             LEARN MORE
           </Link>
         </div>
@@ -69,7 +69,7 @@ export default function PracticeAreas() {
             show a material and substantial change in circumstances has occurred
             since the entry of your prior order.
           </p>
-          <Link className="button" href="/practice-areas/modification">
+          <Link className="button" href="/practice-areas/modification" aria-label="Learn more about modification">
             LEARN MORE
           </Link>
         </div>

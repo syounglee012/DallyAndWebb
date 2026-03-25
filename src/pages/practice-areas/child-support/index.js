@@ -18,7 +18,7 @@ export default function ChildSupport() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">CHILD SUPPORT</p>
+            <h1 className="body-copy-bold">CHILD SUPPORT</h1>
             <p className="body-copy">
               When parents of a child are separated, the Family Code provides
               guidelines for the calculation of child support to ensure that the
@@ -57,6 +57,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

@@ -19,7 +19,7 @@ export default function Adoption() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">ADOPTION</p>
+            <h1 className="body-copy-bold">ADOPTION</h1>
             <p className="body-copy">
               Adoption occurs when a party becomes the legal parent to a child.
               The most common form of adoption is a Step Parent Adoption.
@@ -54,6 +54,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

@@ -19,7 +19,7 @@ export default function MilitaryDivorce() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">MILITARY DIVORCE</p>
+            <h1 className="body-copy-bold">MILITARY DIVORCE</h1>
             <p className="body-copy">
               If you (or your spouse) are, or were, in the military, your
               divorce may entail unusual and complex issues related to
@@ -50,6 +50,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

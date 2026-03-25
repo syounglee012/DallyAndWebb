@@ -19,7 +19,7 @@ export default function SameSexDivorce() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">SAME-SEX DIVORCE</p>
+            <h1 className="body-copy-bold">SAME-SEX DIVORCE</h1>
             <p className="body-copy">
               Prior to June of 2015, the Texas courts refused to recognize
               same-sex divorces because the state of Texas did not recognize
@@ -54,6 +54,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

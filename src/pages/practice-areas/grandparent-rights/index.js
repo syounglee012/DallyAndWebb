@@ -19,7 +19,7 @@ export default function grandparentRights() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">GRANDPARENT RIGHTS</p>
+            <h1 className="body-copy-bold">GRANDPARENT RIGHTS</h1>
             <p className="body-copy">
               The state of Texas gives great deference to parents in allowing
               them to raise and make decisions for their children without state
@@ -67,6 +67,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
