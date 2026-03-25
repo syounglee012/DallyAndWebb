@@ -15,9 +15,9 @@ export default function attorneyBanner(props) {
       $memoriam={memoriam}
     >
       <Title $memoriam={memoriam}>
-        <p className="header-white-large">
+        <h1 className="header-white-large">
           {memoriam ? "IN MEMORIAM" : props.name}
-        </p>
+        </h1>
         <p className="practice-area">
           {memoriam
             ? memoriamSubline
@@ -78,6 +78,8 @@ const Title = styled.div`
   padding-left: 0;
 
   .header-white-large {
+    margin: 0;
+    font-weight: inherit;
     border-bottom: 2px solid #67318d;
     width: fit-content;
     padding-bottom: 1rem;

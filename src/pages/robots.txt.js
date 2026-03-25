@@ -1,17 +1,31 @@
-export async function getServerSideProps({ res }) {
-  const baseUrl = (
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.texfamilylawyer.com"
-  ).replace(/\/$/, "");
+const DEFAULT_SITE_URL = "https://www.texfamilylawyer.com";
 
-  const robotsText = `User-agent: *
+export async function getServerSideProps({ res }) {
+  try {
+    const baseUrl = (
+      process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL
+    ).replace(/\/$/, "");
+
+    const robotsText = `User-agent: *
 Allow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
 `;
 
-  res.setHeader("Content-Type", "text/plain");
-  res.write(robotsText);
-  res.end();
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader(
+      "Cache-Control",
+      "public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200"
+    );
+    res.write(robotsText);
+    res.end();
+  } catch {
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.write("User-agent: *\nAllow: /\n");
+    res.end();
+  }
 
   return { props: {} };
 }

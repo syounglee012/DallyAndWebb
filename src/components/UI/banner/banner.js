@@ -49,7 +49,9 @@ const Container = styled.div`
     opacity: 0.8;
   }
 `;
-const Title = styled.p`
+const Title = styled.h1`
+  margin: 0;
+  font-weight: inherit;
   position: absolute;
   bottom: 9px;
   left: ${(props) => (props.left ? props.left : "calc(48.5% - 615px)")};

@@ -19,7 +19,7 @@ export default function ProtectiveOrders() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">PROTECTIVE ORDERS</p>
+            <h1 className="body-copy-bold">PROTECTIVE ORDERS</h1>
             <p className="body-copy">
               In Texas, there are three types of orders of protection based on
               family violence: 1. Temporary ex parte protective order (only
@@ -60,6 +60,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

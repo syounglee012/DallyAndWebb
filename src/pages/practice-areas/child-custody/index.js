@@ -19,7 +19,7 @@ export default function ChildCustody() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">CHILD CUSTODY</p>
+            <h1 className="body-copy-bold">CHILD CUSTODY</h1>
             <p className="body-copy">
               While most people use the terms “full custody” or “sole custody,”
               those are not actual legal terms in Texas. There is a presumption
@@ -105,6 +105,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

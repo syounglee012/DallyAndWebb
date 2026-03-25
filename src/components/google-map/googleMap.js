@@ -1,5 +1,4 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 
 import {
   GoogleMap,
@@ -8,7 +7,11 @@ import {
   LoadScript,
 } from "@react-google-maps/api";
 
+/** Stable reference + core `maps` lib only — avoids Loader "different options" with `marker`. */
+const MAP_LIBRARIES = ["maps"];
+
 function MyComponent() {
+  const libraries = useMemo(() => MAP_LIBRARIES, []);
   const containerStyle = {
     width: "100%",
     maxWidth: "600px",
@@ -34,25 +37,12 @@ function MyComponent() {
       link: "https://maps.app.goo.gl/RShyRCH7VmVCL5rv8",
     },
   ];
-  useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      !window.location.search.includes("refreshed")
-    ) {
-      window.history.replaceState(
-        {},
-        "",
-        `${window.location.pathname}?refreshed=yes`,
-      );
-      window.location.reload();
-    }
-  }, []);
 
   return (
     <LoadScript
       googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_API}
       loadingElement={<div>Loading...</div>}
-      libraries={["marker"]}
+      libraries={libraries}
     >
       <GoogleMap mapContainerStyle={containerStyle} center={position} zoom={12}>
         {places.map((place) => (

@@ -19,7 +19,7 @@ export default function CollaborativeDivorce() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">COLLABORATIVE DIVORCE</p>
+            <h1 className="body-copy-bold">COLLABORATIVE DIVORCE</h1>
             <p className="body-copy">
               Collaborative Divorce is a relatively new trend in Family Law in
               which both parties commit to settle all issues outside of the
@@ -65,6 +65,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

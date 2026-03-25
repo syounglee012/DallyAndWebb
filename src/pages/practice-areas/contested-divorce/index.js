@@ -19,9 +19,9 @@ export default function ContestedDivorce() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">
+            <h1 className="body-copy-bold">
               DIVORCE - UNCONTESTED VS. CONTESTED
-            </p>
+            </h1>
             <p className="body-copy">
               While we frequently hear the term “uncontested” - there is no
               distinction in Texas law between contested cases and cases that
@@ -115,6 +115,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

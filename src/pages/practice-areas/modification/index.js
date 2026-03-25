@@ -19,7 +19,7 @@ export default function Modification() {
             <MobileDropDown title={"Practice Areas"} />
           </span>
           <div>
-            <p className="body-copy-bold">MODIFYING CUSTODY OR CHILD SUPPORT</p>
+            <h1 className="body-copy-bold">MODIFYING CUSTODY OR CHILD SUPPORT</h1>
             <p className="body-copy">
               If you already have a court order in place and the order has
               become unworkable or you no longer believe that the order is in
@@ -66,6 +66,7 @@ const Container = styled.div`
     justify-content: space-between;
   }
   .body-copy-bold {
+    margin: 0;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

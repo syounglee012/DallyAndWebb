@@ -19,12 +19,13 @@ export default function Home() {
             className="main-image item"
           />
           <MainText className="item">
-            <p className="main-top-text">DIVORCE</p>
-            <span />
-            <p className="main-top-text">CUSTODY</p>
-            <span />
-            <p className="main-top-text">CHILD SUPPORT</p>
-            <span />
+            <h1 className="hero-heading">
+              <span className="main-top-text">DIVORCE</span>
+              <span className="hero-rule" aria-hidden="true" />
+              <span className="main-top-text">CUSTODY</span>
+              <span className="hero-rule" aria-hidden="true" />
+              <span className="main-top-text">CHILD SUPPORT</span>
+            </h1>
             <p className="main-text">
               At Dally & Webb Family Law, PLLC, we are dedicated to providing
               you with an unparalleled level of legal representation for all
@@ -162,7 +163,12 @@ const MainText = styled.div`
   margin-bottom: 3rem;
   align-self: center;
 
-  & span {
+  .hero-heading {
+    margin: 0;
+    font-weight: inherit;
+  }
+
+  .hero-rule {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -197,7 +203,7 @@ const MainText = styled.div`
     .main-text {
       font-size: 18px;
     }
-    & span {
+    .hero-rule {
       margin: 0.6rem 0;
     }
   }
@@ -211,7 +217,7 @@ const MainText = styled.div`
       letter-spacing: 0.15em;
       line-height: 1.3;
     }
-    & span {
+    .hero-rule {
       max-width: 100%;
       margin: 0.3rem 0;
     }
@@ -225,7 +231,7 @@ const MainText = styled.div`
       font-size: 22px;
       letter-spacing: 0.1em;
     }
-    & span {
+    .hero-rule {
       max-width: 100%;
       margin: 0.3rem 0;
     }
@@ -244,7 +250,7 @@ const MainText = styled.div`
       letter-spacing: 4px;
       line-height: 1.8rem;
     }
-    & span {
+    .hero-rule {
       max-width: 100%;
       margin: 0.2rem 0;
     }
@@ -260,7 +266,7 @@ const MainText = styled.div`
       letter-spacing: 4px;
       line-height: 1.8rem;
     }
-    & span {
+    .hero-rule {
       max-width: 100%;
     }
     .main-text {
@@ -275,7 +281,7 @@ const MainText = styled.div`
       letter-spacing: 3px;
       line-height: 1.5rem;
     }
-    & span {
+    .hero-rule {
       max-width: 100%;
     }
     .main-text {
