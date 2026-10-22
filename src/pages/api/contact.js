@@ -36,13 +36,14 @@ export default async function contact(req, res) {
   }
 
   const lori = process.env.EMAIL;
+  const sara = process.env.EMAIL1;
   const admin = process.env.ADMIN_EMAIL;
-  if (!lori || !admin) {
+  if (!lori || !sara || !admin) {
     return res.status(500).json({ message: "Email service unavailable" });
   }
 
   const msg = {
-    to: lori, // Active recipient
+    to: [lori, sara], // Active recipient
     from: admin, // Change to your verified sender
     subject: `Message From ${parsed.name}`,
     text: `Sent from: ${parsed.name}`,
